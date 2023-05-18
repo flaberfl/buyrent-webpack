@@ -50,7 +50,7 @@
 		border-radius: rem(90);
 		border: 1px solid $hoverColor;
 		@include adaptiveValue("width", 155, 262);
-		@include adaptiveValue("height", 44, 55);
+		@include adaptiveValue("min-height", 44, 55);
 
 		transition: all 0.3s ease 0s;
 
