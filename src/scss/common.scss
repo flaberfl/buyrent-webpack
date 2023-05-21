@@ -1,7 +1,23 @@
-h1 {
-  @include adaptiveValue("font-size", 67, 25);
-  font-weight: 400;
-  line-height: math.div(80 , 67);
-}
-
 .title {}
+
+h1 {
+  font-family: "SangBleuEmpireTrial";
+  @include adaptiveValue("font-size", 67, 28);
+  line-height: math.div(80, 67);
+  text-transform: uppercase;
+
+  span {
+    display: block;
+    margin-top: rem(-13);
+
+    font-family: "Miama";
+    @include adaptiveValue("font-size", 57, 32);
+    line-height: math.div(80, 57);
+    color: $borderColor;
+    text-transform: capitalize;
+
+    @media (min-width:$mobile) {
+      margin-left: rem(65);
+    }
+  }
+}

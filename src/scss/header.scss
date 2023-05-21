@@ -140,7 +140,7 @@
 		gap: rem(6);
 
 		&_mobile {
-			@media (min-width:em(769)) {
+			@media (min-width:em(768)) {
 				display: none;
 			}
 		}
@@ -198,7 +198,7 @@
 			}
 		}
 
-		@media (min-width:em(769)) and (max-width:$tablet) {
+		@media (min-width:em(768)) and (max-width:$tablet) {
 			padding-top: rem(130);
 		}
 	}

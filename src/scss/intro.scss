@@ -1,0 +1,108 @@
+//====================================================================================================
+.intro {
+  // background: linear-gradient(0deg, rgba(2, 11, 24, 0.78), rgba(2, 11, 24, 0.78)), url(image.png), url(image.png);
+  // transform: matrix(-1, 0, 0, 1, 0, 0);
+  background: linear-gradient(0deg, rgba(2, 11, 24, 0.78), rgba(2, 11, 24, 0.78)), url('@img/intro-backround.jpg') right / cover no-repeat;
+  // height: 100vh;
+  @include adaptiveValue("padding-top", 210, 150);
+  padding-bottom: rem(37);
+
+  // background-position-y: -10px;
+
+
+  /* .intro__container */
+  &__container {}
+
+  &__content {
+    @media (min-width:$mobile) {
+      max-width: rem(720);
+    }
+
+    @media (max-width:$mobile) {
+      text-align: center;
+    }
+  }
+
+  /* .intro__title */
+  &__title {
+    margin-bottom: rem(6);
+  }
+
+  /* .intro__slogan */
+  &__slogan {
+    max-width: rem(360);
+    margin-bottom: rem(35);
+
+    margin-left: rem(70);
+    @include adaptiveValue("font-size", 18, 15);
+    font-weight: 300;
+    line-height: math.div(27, 18);
+
+    // @media (min-width:$mobile) {}
+
+    @media (max-width:$mobile) {
+      margin: 0 auto rem(35);
+    }
+  }
+
+  /* .intro__social */
+  &__social {
+    @media (min-width:$mobile) {
+      padding-left: rem(70);
+    }
+  }
+
+  /* .intro__scroll-btn */
+  &__scroll-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("width", 120, 68);
+    @include adaptiveValue("height", 120, 68);
+    margin-left: auto;
+
+    border-radius: 100%;
+    border: rem(1) solid $borderColor;
+
+    &:hover {}
+
+    @media (max-width:em(768)) {
+      margin: rem(50) auto 0;
+    }
+  }
+}
+
+.social-intro {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  column-gap: rem(18);
+
+  @media (max-width:$mobile) {
+    grid-auto-flow: row;
+    justify-items: center;
+    row-gap: rem(35);
+    // align-items: center;
+  }
+
+  /* .social-intro__link */
+  &__link {
+    @include adaptiveValue("width", 325, 288);
+    column-gap: rem(20);
+
+    letter-spacing: 0.06em;
+  }
+
+  /* .social-intro__descr */
+  &__descr {
+    font-size: rem(13);
+    line-height: math.div(20, 13);
+    font-weight: 300;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+//====================================================================================================
