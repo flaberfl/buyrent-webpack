@@ -37,7 +37,9 @@
 	}
 
 	&__logo {
-		margin: 0 auto;
+		@media (max-width:$tablet) {
+			margin: 0 auto;
+		}
 
 		img {
 			@include adaptiveValue("width", 202, 147);
@@ -45,7 +47,7 @@
 	}
 
 	&__menu {
-		@media (min-width:em(1260)) {
+		@media (min-width:em(1042)) {
 			@include adaptiveValue("margin-right", 62, 10);
 			@include adaptiveValue("margin-left", 62, 10);
 		}
@@ -127,7 +129,7 @@
 	}
 
 	&__lang {
-	
+
 		&:nth-child(2),
 		&:nth-child(3) {
 			@media (max-width:$mobileSmall) {
