@@ -1,17 +1,8 @@
 //====================================================================================================
 .intro {
-  // background: linear-gradient(0deg, rgba(2, 11, 24, 0.78), rgba(2, 11, 24, 0.78)), url(image.png), url(image.png);
-  // transform: matrix(-1, 0, 0, 1, 0, 0);
   background: linear-gradient(0deg, rgba(2, 11, 24, 0.78), rgba(2, 11, 24, 0.78)), url('@img/intro-backround.jpg') right / cover no-repeat;
-  // height: 100vh;
   @include adaptiveValue("padding-top", 210, 150);
-  padding-bottom: rem(37);
-
-  // background-position-y: -10px;
-
-
-  /* .intro__container */
-  &__container {}
+  padding-bottom: rem(24);
 
   &__content {
     @media (min-width:$mobile) {
@@ -30,6 +21,7 @@
 
   /* .intro__slogan */
   &__slogan {
+    font-family: "Euclid Circular A";
     max-width: rem(360);
     margin-bottom: rem(35);
 
@@ -37,8 +29,6 @@
     @include adaptiveValue("font-size", 18, 15);
     font-weight: 300;
     line-height: math.div(27, 18);
-
-    // @media (min-width:$mobile) {}
 
     @media (max-width:$mobile) {
       margin: 0 auto rem(35);
@@ -82,7 +72,6 @@
     grid-auto-flow: row;
     justify-items: center;
     row-gap: rem(35);
-    // align-items: center;
   }
 
   /* .social-intro__link */
