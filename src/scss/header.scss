@@ -149,19 +149,7 @@
 			margin-left: auto;
 		}
 	}
-
-	// &__lang {
-
-	// 	&:nth-child(2),
-	// 	&:nth-child(3) {
-	// 		@media (max-width:$mobileSmall) {
-	// 			display: none;
-	// 		}
-	// 	}
-	// }
-
 }
-
 
 .menu {
 	padding: 0 rem(10); // отступы безопасности
@@ -234,6 +222,8 @@
 
 		@media (max-width:$mobileSmall) {
 			margin-right: auto;
+			// margin-left: rem(50);
+			@include adaptiveValue("margin-left", 50, 0, 480, 320, 2);
 		}
 	}
 
@@ -304,7 +294,6 @@
 		span {
 			top: calc(50% - rem(1));
 		}
-
 
 		.menu-open & {
 			span {
