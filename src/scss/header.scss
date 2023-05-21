@@ -126,17 +126,22 @@
 		align-items: center;
 		gap: rem(6);
 
-	}
-
-	&__lang {
-
-		&:nth-child(2),
-		&:nth-child(3) {
-			@media (max-width:$mobileSmall) {
-				display: none;
+		&_mobile {
+			@media (min-width:em(769)){
+				 display: none; 
 			}
 		}
 	}
+
+	// &__lang {
+
+	// 	&:nth-child(2),
+	// 	&:nth-child(3) {
+	// 		@media (max-width:$mobileSmall) {
+	// 			display: none;
+	// 		}
+	// 	}
+	// }
 
 }
 
