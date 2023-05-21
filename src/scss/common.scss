@@ -1,1 +1,7 @@
+h1 {
+  @include adaptiveValue("font-size", 67, 25);
+  font-weight: 400;
+  line-height: math.div(80 , 67);
+}
+
 .title {}
