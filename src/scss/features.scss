@@ -93,10 +93,16 @@
     @include adaptiveValue("margin-top", 54, 30);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    @include adaptiveValue("gap", 55, 0);
+    @include adaptiveValue("gap", 55, 30);
 
     @media (max-width: em(1080)) {
       grid-template-columns: repeat(2, 1fr);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: em(620)) {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -105,12 +111,6 @@
     display: flex;
     align-items: center;
     @include adaptiveValue("column-gap", 20, 16);
-
-    // @media (max-width: em(1080)) {
-    //   flex: 0 1 50%;
-    //   justify-self: center;
-    //   align-self: flex-start;
-    // }
   }
 
   /* .features__icon */
@@ -139,6 +139,8 @@
 
     @media (max-width:$mobile) {
       font-size: rem(16);
+
+      max-width: rem(150);
     }
   }
 }
