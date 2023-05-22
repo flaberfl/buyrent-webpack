@@ -1,0 +1,71 @@
+.profit {
+  @include adaptiveValue("padding-top", 130, 60);
+
+  /* .profit__container */
+  &__container {}
+
+  /* .profit__title */
+  &__title {
+    max-width: rem(580);
+    @include adaptiveValue("margin-bottom", 30, 11);
+  }
+
+  /* .profit__body */
+  &__body {
+    display: grid;
+    grid-template-columns: 56.65% 1fr;
+  }
+
+  /* .profit__content */
+  &__content {}
+
+  /* .profit__text */
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: rem(14);
+    }
+
+    font-size: rem(16);
+    line-height: math.div(27, 16);
+    font-weight: 300;
+
+    @media (max-width:$mobile) {
+      font-size: rem(14);
+    }
+  }
+
+  /* .profit__values */
+  &__values {}
+
+  /* .profit__value */
+  &__value {
+
+    /* .profit__value_prc */
+    &_prc {}
+
+    /* .profit__value_top */
+    &_top {}
+  }
+
+  /* .profit__prc */
+  &__prc {}
+
+  /* .profit__label */
+  &__label {}
+
+  /* .profit__top */
+  &__top {}
+
+  /* .profit__right */
+  &__advangages {}
+
+  /* .profit__list */
+  &__list {}
+
+  /* .profit__button */
+  &__button {}
+}
+
+.title {}
+
+.button {}
