@@ -6,7 +6,7 @@
 
   /* .profit__title */
   &__title {
-    max-width: rem(580);
+    max-width: rem(630);
     @include adaptiveValue("margin-bottom", 30, 11);
   }
 
@@ -21,6 +21,8 @@
 
   /* .profit__text */
   &__text {
+    padding-right: rem(40);
+
     &:not(:last-child) {
       margin-bottom: rem(14);
     }
@@ -48,7 +50,18 @@
   }
 
   /* .profit__prc */
-  &__prc {}
+  &__prc {
+    font-weight: 500;
+    color: $borderColor;
+    font-size: rem(36);
+    
+    span {
+      font-family: "SangBleuEmpireTrial";
+      font-size: rem(59);
+      line-height: math.div(27, 59);
+      // font-size: rem(59);
+    }
+  }
 
   /* .profit__label */
   &__label {}
