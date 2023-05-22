@@ -37,37 +37,74 @@
   }
 
   /* .profit__values */
-  &__values {}
+  &__values {
+    display: flex;
+  }
 
   /* .profit__value */
   &__value {
+    padding-top: rem(100);
+    @include adaptiveValue("width", 254, 158);
+    @include adaptiveValue("height", 254, 158);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    gap: rem(20);
+
+    &:last-child{
+      margin-left: rem(-30);
+    }
+
 
     /* .profit__value_prc */
-    &_prc {}
+    &_prc {
+      border: rem(1) solid $borderColor;
+    }
 
     /* .profit__value_top */
-    &_top {}
+    &_top {
+      border: rem(1) solid $hoverColor;
+    }
   }
 
   /* .profit__prc */
   &__prc {
-    font-weight: 500;
     color: $borderColor;
-    font-size: rem(36);
-    
-    span {
-      font-family: "SangBleuEmpireTrial";
-      font-size: rem(59);
-      line-height: math.div(27, 59);
-      // font-size: rem(59);
+    font-size: rem(59);
+    font-weight: 500;
+    font-family: "SangBleuEmpireTrial";
+    line-height: math.div(27, 59);
+
+    @media (max-width:$mobile) {
+      font-size: rem(36);
     }
   }
 
   /* .profit__label */
-  &__label {}
+  &__label {
+    max-width: rem(130);
+
+    font-size: rem(14);
+    line-height: math.div(21, 14);
+
+    @media (max-width:$mobile) {
+      font-size: rem(12);
+    }
+  }
 
   /* .profit__top */
-  &__top {}
+  &__top {
+    font-family: "SangBleuEmpireTrial";
+    font-size: rem(38);
+    font-weight: 500;
+    line-height: math.div(27, 38);
+    color: $hoverColor;
+
+    @media (max-width:$mobile) {
+      font-size: rem(27);
+    }
+  }
 
   /* .profit__right */
   &__advangages {}
