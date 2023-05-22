@@ -31,4 +31,15 @@ h2 {
   span {
     color: $borderColor;
   }
+
+  @media (max-width:$mobile) {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: rem(610);
+  }
+}
+
+.title-padding {
+  @include adaptiveValue("padding-left", 70, 0, 1440, 992, 2);
 }
