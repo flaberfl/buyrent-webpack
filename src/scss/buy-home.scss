@@ -4,6 +4,7 @@
   /* .buy-home__container */
   &__container {
     @include adaptiveValue("padding-top", 80, 30);
+    padding-bottom: rem(105);
     position: relative;
     display: grid;
     grid-template-columns: 51.6% 1fr;
@@ -17,11 +18,10 @@
       position: absolute;
       background: url('@img/buy-home/book.png') 0 0 no-repeat;
       opacity: .1;
-      top: 0;
-      right: 0;
+      top: rem(-88);
+      right: rem(-13);
       z-index: 0;
     }
-
   }
 
   /* .buy-home__content */
@@ -58,23 +58,26 @@
 }
 
 .manager-buy-home {
-  padding-top: rem(14);
+  padding-top: rem(15);
+  position: relative;
 
   /* .manager-buy-home__name */
   &__name {
-    margin-bottom: rem(8);
+    margin-bottom: rem(4);
 
     @include adaptiveValue("font-size", 24, 20);
     font-weight: 500;
+    line-height: math.div(23, 24);
   }
 
   /* .manager-buy-home__position */
   &__position {
-    margin-bottom: rem(14);
+    margin-bottom: rem(5);
 
     color: #A9AFB3;
     @include adaptiveValue("font-size", 16, 14);
     font-weight: 500;
+    line-height: math.div(25, 16);
   }
 
   /* .manager-buy-home__text */
@@ -83,6 +86,8 @@
 
     font-size: rem(13);
     font-weight: 300;
+    line-height: math.div(21, 13);
+    font-style: italic;
 
     @media (max-width:$mobile) {
       font-size: rem(12);
@@ -90,20 +95,74 @@
   }
 
   /* .manager-buy-home__image */
-  &__image {}
+  &__image {
+
+    img {
+      position: absolute;
+
+      // right: rem(-71);
+      // bottom: rem(-250);
+      right: rem(-70);
+      bottom: rem(-140);
+      max-width: 100%;
+    }
+  }
 
   /* .manager-buy-home__bage */
-  &__bage {}
+  &__bage {
+    position: absolute;
+    bottom: rem(-28);
+    right: rem(90);
+  }
 }
 
 .bage-manager {
+  position: relative;
+  display: flex;
+  background-color: $hoverColor;
+  padding: rem(18) 0;
+
+  border-radius: rem(600);
+
+  &::before{
+    content:'';
+    position: absolute;
+
+  }
 
   /* .bage-manager__item */
-  &__item {}
+  &__item {
+    // padding: 0 rem(30);
+    @include adaptiveValue("padding-left", 30, 10);
+    @include adaptiveValue("padding-right", 30, 10);
+    min-height: rem(83);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:nth-child(2) {
+      border-left: rem(1) dashed rgba(255, 255, 255, 0.23);
+      border-right: rem(1) dashed rgba(255, 255, 255, 0.23);
+    }
+  }
 
   /* .bage-manager__label */
-  &__label {}
+  &__label {
+    font-size: rem(13);
+    font-weight: 400;
+    line-height: math.div(16, 13);
+  }
 
   /* .bage-manager__value */
-  &__value {}
+  &__value {
+    @include adaptiveValue("font-size", 30, 20);
+    line-height: math.div(38, 30);
+    font-weight: 700;
+
+    span {
+      @include adaptiveValue("font-size", 18, 12);
+      line-height: math.div(23, 18);
+    }
+  }
 }
