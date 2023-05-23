@@ -1,6 +1,9 @@
 .buy-home {
   margin-top: rem(-112);
-  overflow: hidden;
+
+  @media (max-width:em(1080)) {
+    overflow: hidden;
+  }
 
   /* .buy-home__container */
   &__container {
@@ -16,30 +19,53 @@
     @media (max-width:$mobile) {
       grid-template-columns: 1fr;
 
-      padding-bottom: rem(200);
+      // padding-bottom: rem(200);
+
+      @include adaptiveValue("padding-bottom", 200, 143, 767, 320, 1);
+    }
+
+    @media (max-width: em(660)) {
+      // justify-items: center;
     }
 
     &::before {
       content: '';
-      @include adaptiveValue("width", 969, 365);
-      @include adaptiveValue("height", 550, 368);
+      width: 100%;
+      height: 100%;
+      // @include adaptiveValue("width", 969, 365);
+      // @include adaptiveValue("height", 550, 368);
+
       position: absolute;
-      background: url('@img/buy-home/book.png') 0 0 no-repeat;
+      background: url('@img/buy-home/book.png') center bottom no-repeat;
       opacity: .1;
       top: rem(0);
       right: rem(0);
       z-index: 0;
+
+      @media (max-width: em(660)) {
+        // top: rem(120);
+        // right: rem(150);
+      }
     }
   }
 
   /* .buy-home__content */
   &__content {
     max-width: rem(500);
+
+    @media (max-width: em(660)) {
+      margin: 0 auto;
+    }
   }
 
   /* .buy-home__title */
   &__title {
     @include adaptiveValue("margin-bottom", 16, 11);
+    text-align: left;
+
+    @media (max-width:em(660)) {
+      text-align: center;
+    }
   }
 
   /* .buy-home__text */
@@ -54,15 +80,28 @@
     span {
       font-weight: 700;
     }
+
+    @media (max-width: em(660)) {
+      text-align: center;
+    }
   }
 
   /* .buy-home__button */
   &__button {
     width: rem(263);
+
+    @media (max-width: em(660)) {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   /* .buy-home__manager */
-  &__manager {}
+  &__manager {
+    @media (max-width: em(660)) {
+      // justify-self: start;
+    }
+  }
 
   /* .buy-home__bage */
   &__bage {
@@ -121,8 +160,15 @@
       bottom: rem(-140);
       max-width: 100%;
 
-      @media (max-width:$mobile){
-         bottom: rem(-360); 
+      @media (max-width:$mobile) {
+        bottom: rem(-360);
+      }
+
+      @media (max-width: em(660)) {
+        // max-width: 75%;
+        @include adaptiveValue("width", 473, 278, 660, 320, 2);
+        @include adaptiveValue("bottom", -360, -180, 660, 320, 2);
+        // width: rem(600);
       }
     }
   }
@@ -130,6 +176,8 @@
 
 .bage-buy-home {
   display: flex;
+  @include adaptiveValue("width", 452, 281);
+
   background-color: $hoverColor;
   z-index: 10;
 
@@ -137,6 +185,12 @@
 
   @media (min-width:$tablet) {
     padding: rem(18) 0;
+  }
+
+  @media (max-width: em(660)) {
+    right: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 
   &::before {
@@ -157,7 +211,7 @@
   /* .bage-buy-home__item */
   &__item {
     @include adaptiveValue("padding-left", 30, 10);
-    @include adaptiveValue("padding-right", 30, 10);
+    @include adaptiveValue("padding-right", 30, 16);
     min-height: rem(83);
 
     display: flex;
