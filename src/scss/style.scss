@@ -115,10 +115,11 @@ body {
     }
   }
 
-  // [class*="__container_wide"] {
-  // 	max-width: rem(1620);
-  // 	margin: 0 auto;
-  // }
+  [class*="__container_small"] {
+    max-width: rem(1080);
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 @else {
@@ -168,6 +169,7 @@ body {
 @import "features";
 @import "profit";
 @import "buy-home";
+@import "services";
 @import "footer";
 
 // Подключение стилей отдельных страниц

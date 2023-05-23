@@ -1,0 +1,80 @@
+.services {
+  padding-top: rem(120);
+  padding-bottom: rem(110);
+
+  /* .services__container */
+  &__container {}
+
+  /* .services__header */
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* .services__title */
+  &__title {}
+
+  /* .services__slogan */
+  &__slogan {
+    justify-self: end;
+    align-self: flex-end;
+
+    @include adaptiveValue("font-size", 22, 15);
+    line-height: math.div(24, 15);
+    font-weight: 400;
+    opacity: .8;
+  }
+
+  /* .services__wrapper */
+  &__wrapper {
+    display: grid;
+    @include adaptiveValue("row-gap", 120, 40);
+  }
+
+  /* .services__item */
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    &_title {
+      align-items: end;
+    }
+  }
+
+  /* .services__image */
+  &__image {}
+
+  /* .services__badge */
+  &__badge {}
+
+  /* .services__label */
+  &__label {}
+
+  /* .services__value */
+  &__value {}
+
+  /* .services__descr */
+  &__descr {}
+
+  /* .services__name */
+  &__name {
+    @include adaptiveValue("font-size", 32, 22);
+    line-height: math.div(41, 32);
+    font-weight: 300;
+  }
+
+  /* .services__text */
+  &__text {
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 300;
+    line-height: math.div(28, 18);
+    color: $textCoolor;
+
+    /* .services__text_list */
+    &_list {}
+  }
+
+  /* .services__button */
+  &__button {}
+}

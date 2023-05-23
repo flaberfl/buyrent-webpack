@@ -103,8 +103,8 @@
     }
   }
 
-  /* .buy-home__bage */
-  &__bage {
+  /* .buy-home__badge */
+  &__badge {
     position: absolute;
     @include adaptiveValue("bottom", 77, 30);
     right: rem(104);
@@ -174,7 +174,7 @@
   }
 }
 
-.bage-buy-home {
+.badge-buy-home {
   display: flex;
   @include adaptiveValue("width", 452, 281);
 
@@ -208,7 +208,7 @@
     left: 50%;
   }
 
-  /* .bage-buy-home__item */
+  /* .badge-buy-home__item */
   &__item {
     @include adaptiveValue("padding-left", 30, 10);
     @include adaptiveValue("padding-right", 30, 16);
@@ -227,14 +227,14 @@
     }
   }
 
-  /* .bage-buy-home__label */
+  /* .badge-buy-home__label */
   &__label {
     font-size: rem(13);
     font-weight: 400;
     line-height: math.div(16, 13);
   }
 
-  /* .bage-buy-home__value */
+  /* .badge-buy-home__value */
   &__value {
     @include adaptiveValue("font-size", 30, 20);
     line-height: math.div(38, 30);
