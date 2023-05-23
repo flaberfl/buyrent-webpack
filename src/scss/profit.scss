@@ -1,5 +1,6 @@
 .profit {
   @include adaptiveValue("padding-top", 130, 60);
+  @include adaptiveValue("padding-bottom", 150, 50);
 
   background: linear-gradient(180deg, #1F222C 23.17%, rgba(31, 34, 44, 0) 100%), linear-gradient(0deg, rgba(2, 11, 24, 0.78), rgba(2, 11, 24, 0.78)), url('@img/profit/bgProfit.jpg') center / cover no-repeat;
 
@@ -58,7 +59,6 @@
 
   /* .profit__value */
   &__value {
-    padding-top: rem(100);
     @include adaptiveValue("padding-top", 100, 55, 1440, 600, 1);
     @include adaptiveValue("width", 254, 158);
     @include adaptiveValue("height", 254, 158);
@@ -147,9 +147,7 @@
     display: grid;
     @include adaptiveValue("margin-bottom", 40, 20);
     padding-left: rem(17);
-
     @include adaptiveValue("padding-right", 80, 30, 1440, 767, 2);
-
     @include adaptiveValue("gap", 38, 20);
 
     @media (max-width:$mobile) {
