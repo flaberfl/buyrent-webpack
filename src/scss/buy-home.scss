@@ -1,5 +1,6 @@
 .buy-home {
   margin-top: rem(-112);
+  overflow: hidden;
 
   /* .buy-home__container */
   &__container {
@@ -9,11 +10,13 @@
     display: grid;
     grid-template-columns: 50.5% 1fr;
     gap: rem(15);
-    
+
     background-color: $darkColor;
-    
-    @media (max-width:$mobile){
+
+    @media (max-width:$mobile) {
       grid-template-columns: 1fr;
+
+      padding-bottom: rem(200);
     }
 
     &::before {
@@ -60,6 +63,13 @@
 
   /* .buy-home__manager */
   &__manager {}
+
+  /* .buy-home__bage */
+  &__bage {
+    position: absolute;
+    @include adaptiveValue("bottom", 77, 30);
+    right: rem(104);
+  }
 }
 
 .manager-buy-home {
@@ -112,16 +122,9 @@
       max-width: 100%;
     }
   }
-
-  /* .manager-buy-home__bage */
-  &__bage {
-    position: absolute;
-    @include adaptiveValue("bottom", 77, 30);
-    right: rem(104);
-  }
 }
 
-.bage-manager {
+.bage-buy-home {
   display: flex;
   background-color: $hoverColor;
   z-index: 10;
@@ -147,7 +150,7 @@
     left: 50%;
   }
 
-  /* .bage-manager__item */
+  /* .bage-buy-home__item */
   &__item {
     @include adaptiveValue("padding-left", 30, 10);
     @include adaptiveValue("padding-right", 30, 10);
@@ -166,14 +169,14 @@
     }
   }
 
-  /* .bage-manager__label */
+  /* .bage-buy-home__label */
   &__label {
     font-size: rem(13);
     font-weight: 400;
     line-height: math.div(16, 13);
   }
 
-  /* .bage-manager__value */
+  /* .bage-buy-home__value */
   &__value {
     @include adaptiveValue("font-size", 30, 20);
     line-height: math.div(38, 30);
