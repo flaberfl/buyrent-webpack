@@ -7,9 +7,14 @@
     padding-bottom: rem(105);
     position: relative;
     display: grid;
-    grid-template-columns: 51.6% 1fr;
-
+    grid-template-columns: 50.5% 1fr;
+    gap: rem(15);
+    
     background-color: $darkColor;
+    
+    @media (max-width:$mobile){
+      grid-template-columns: 1fr;
+    }
 
     &::before {
       content: '';
@@ -111,7 +116,7 @@
   /* .manager-buy-home__bage */
   &__bage {
     position: absolute;
-    bottom: rem(77);
+    @include adaptiveValue("bottom", 77, 30);
     right: rem(104);
   }
 }
@@ -119,10 +124,13 @@
 .bage-manager {
   display: flex;
   background-color: $hoverColor;
-  padding: rem(18) 0;
   z-index: 10;
 
   border-radius: rem(600);
+
+  @media (min-width:$tablet) {
+    padding: rem(18) 0;
+  }
 
   &::before {
     content: '';
@@ -141,7 +149,6 @@
 
   /* .bage-manager__item */
   &__item {
-    // padding: 0 rem(30);
     @include adaptiveValue("padding-left", 30, 10);
     @include adaptiveValue("padding-right", 30, 10);
     min-height: rem(83);
@@ -151,8 +158,11 @@
     justify-content: center;
 
     &:nth-child(2) {
-      border-left: rem(1) dashed rgba(255, 255, 255, 0.23);
-      border-right: rem(1) dashed rgba(255, 255, 255, 0.23);
+
+      @media (min-width:$tablet) {
+        border-left: rem(1) dashed rgba(255, 255, 255, 0.23);
+        border-right: rem(1) dashed rgba(255, 255, 255, 0.23);
+      }
     }
   }
 
