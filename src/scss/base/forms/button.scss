@@ -22,4 +22,15 @@
 			background-color: $btnColor;
 		}
 	}
+
+	&_blue {
+		background-color: $btnColor;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $hoverColor;
+				border-color: $hoverColor;
+			}
+		}
+	}
 }
