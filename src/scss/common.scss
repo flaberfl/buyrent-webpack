@@ -43,3 +43,9 @@ h2 {
 .title-padding {
   @include adaptiveValue("padding-left", 70, 0, 1440, 992, 1);
 }
+
+.tel {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+}
