@@ -17,7 +17,11 @@
   }
 
   /* .services__title */
-  &__title {}
+  &__title {
+    @media (max-width:$mobile) {
+      margin-bottom: rem(10);
+    }
+  }
 
   /* .services__slogan */
   &__slogan {
@@ -51,13 +55,17 @@
 
     @media (max-width:$mobile) {
       grid-template-columns: 1fr;
+      justify-items: center;
     }
 
     &:nth-child(odd) {
       .services__descr {
-        padding-left: rem(55);
         padding-right: rem(20);
         @include adaptiveValue("padding-left", 55, 25, 1440, 768, 1);
+
+        @media (max-width:$mobile) {
+          padding: 0;
+        }
       }
     }
 
@@ -65,6 +73,10 @@
       .services__descr {
         padding-left: rem(32);
         padding-right: rem(35);
+
+        @media (max-width:$mobile) {
+          padding: 0;
+        }
       }
     }
 
@@ -81,6 +93,12 @@
   /* .services__image */
   &__image {
     position: relative;
+
+    @media (max-width:$mobile) {
+      grid-row-start: 1;
+
+      margin-bottom: rem(15);
+    }
 
     img {
       max-width: 100%;
@@ -105,12 +123,15 @@
     background-color: $borderColor;
     border-radius: 50%;
 
-    @media (max-width:$mobile) {
-      gap: rem(9);
-    }
-
     @media (max-width: em(1170)) {
       left: -3%;
+    }
+
+    @media (max-width:$mobile) {
+      gap: rem(9);
+      left: 50%;
+      transform: translate(-50%, 0);
+      @include adaptiveValue("top", 118, 94, 768, 320, 1);
     }
   }
 
@@ -137,7 +158,11 @@
   }
 
   /* .services__descr */
-  &__descr {}
+  &__descr {
+    @media (max-width:$mobile) {
+      text-align: center;
+    }
+  }
 
   /* .services__name */
   &__name {
@@ -147,6 +172,11 @@
     @include adaptiveValue("font-size", 32, 22);
     line-height: math.div(41, 32);
     font-weight: 300;
+
+    @media (max-width:$mobile) {
+      max-width: rem(370);
+      margin: 0 auto rem(20);
+    }
   }
 
   /* .services__text */
@@ -158,11 +188,17 @@
     line-height: math.div(28, 18);
     color: $textCoolor;
 
+    @media (max-width:$mobile) {
+      max-width: rem(450);
+    }
+
     /* .services__text_list */
     &_list {
       @media (min-width:$tablet) {
         padding-left: rem(20);
       }
+
+      text-align: left;
 
       p {
         &:not(:last-child) {
@@ -185,6 +221,7 @@
         }
       }
     }
+
   }
 
   /* .services__button */
