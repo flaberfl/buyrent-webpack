@@ -179,10 +179,18 @@
   /* .item-projects__item */
 
   &__item {
+    &:nth-child(1) {
+      padding: 0 rem(51) 0 rem(25);
+    }
+
     &:nth-child(2) {
       padding: 0 rem(51);
       border-left: 1px dashed rgba(255, 255, 255, 0.07);
       border-right: 1px dashed rgba(255, 255, 255, 0.07);
+    }
+
+    &:nth-child(3) {
+      padding: 0 rem(25) 0 rem(51);
     }
   }
 
@@ -205,7 +213,9 @@
   &__footer {}
 
   /* .item-projects__button */
-  &__button {}
+  &__button {
+    @include adaptiveValue("width", 240, 168);
+  }
 
   /* .item-projects__link */
   &__link {}
