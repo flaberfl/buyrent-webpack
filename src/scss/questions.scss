@@ -7,6 +7,10 @@
     padding-bottom: rem(95);
     background-color: $darkColor;
 
+    @media (max-width:$mobile) {
+      @include adaptiveValue("padding-bottom", 200, 170);
+    }
+
     /* .questions__container_small */
     &_small {
       display: grid;
@@ -27,6 +31,13 @@
 
     @media (max-width: em(880)) {
       padding-left: 0;
+    }
+
+    @media (max-width:$mobile) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
     }
   }
 
@@ -58,7 +69,6 @@
   /* .questions__bottom */
   &__bottom {
     display: flex;
-    // align-items: center;
 
     @media (min-width:em(1051)) {
       justify-content: space-between;
@@ -83,7 +93,6 @@
   }
 
   &__tel {
-
     @media (min-width: em(768)) and (max-width: em(1050)) {
       display: flex;
       align-items: center;
@@ -119,9 +128,6 @@
       background-color: #51CB5F;
       left: 0;
     }
-
-    /* .questions__label_tel */
-    &_tel {}
 
     /* .questions__label_whatsapp */
     &_whatsapp {
@@ -196,7 +202,6 @@
 
   /* .questions__image */
   &__image {
-
     img {
       position: absolute;
 
@@ -206,18 +211,17 @@
 
       @media (max-width: em(1160)) {
         right: rem(-127);
-        // width: 58%;
-
       }
 
       @media (max-width: em(800)) {
         right: rem(-167);
       }
 
-      // @media (max-width: em(1050)) {
-      //   max-width: 100%;
-      //   min-width: 0;
-      // }
+      @media (max-width:$mobile) {
+        right: -50%;
+        transform: translate(-50%, 0);
+        top: 72.4%;
+      }
     }
   }
 }
