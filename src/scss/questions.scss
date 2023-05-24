@@ -1,4 +1,7 @@
 .questions {
+  @media (max-width:em(1080)) {
+    overflow: hidden;
+  }
 
   /* .questions__container */
   &__container {
