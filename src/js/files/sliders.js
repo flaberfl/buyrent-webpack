@@ -29,8 +29,8 @@ function initSliders() {
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 2,
+			spaceBetween: 118,
 			autoHeight: true,
 			speed: 800,
 
@@ -70,28 +70,40 @@ function initSliders() {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
 			},
-			/*
+
 			// Брейкпоінти
 			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
+				// 640: {
+				// 	slidesPerView: 1,
+				// 	spaceBetween: 0,
+				// 	autoHeight: true,
+				// },
 				768: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
-				992: {
-					slidesPerView: 3,
+				830: {
+					slidesPerView: 2,
 					spaceBetween: 20,
 				},
-				1268: {
-					slidesPerView: 4,
+				860: {
+					slidesPerView: 2,
 					spaceBetween: 30,
 				},
+				992: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+				},
+				1200: {
+					slidesPerView: 2,
+					spaceBetween: 60,
+				},
+				1920: {
+					slidesPerView: 2,
+					spaceBetween: 118,
+				},
 			},
-			*/
+
 			// Події
 			on: {
 

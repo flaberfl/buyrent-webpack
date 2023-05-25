@@ -1,6 +1,8 @@
 .projects {
   @include adaptiveValue("padding-top", 117, 56);
 
+  padding-bottom: rem(200);
+
   /* .projects__container */
   &__container {
 
@@ -169,8 +171,11 @@
   &__specifications {
     display: inline-flex;
     min-height: rem(70);
-
     padding: rem(10) 0;
+    margin-bottom: rem(23);
+    // @include adaptiveValue("widht", 480, 266);
+    max-width: rem(480);
+    width: 100%;
 
     border: 1px solid rgba(255, 255, 255, 0.07);
 
@@ -184,18 +189,24 @@
     justify-content: center;
 
     &:nth-child(1) {
-      padding: 0 rem(51) 0 rem(25);
+      // padding: 0 rem(45) 0 rem(25);
+      @include adaptiveValue("padding-right", 45, 10);
+      @include adaptiveValue("padding-left", 25, 10);
     }
 
     &:nth-child(2) {
-      padding: 0 rem(51);
+      // padding: 0 rem(45);
+      @include adaptiveValue("padding-right", 45, 10);
+      @include adaptiveValue("padding-left", 45, 10);
       border-left: 1px dashed rgba(255, 255, 255, 0.07);
       border-right: 1px dashed rgba(255, 255, 255, 0.07);
     }
 
     &:nth-child(3) {
       margin-top: rem(-3);
-      padding: 0 rem(25) 0 rem(51);
+      // padding: 0 rem(25) 0 rem(45);
+      @include adaptiveValue("padding-right", 25, 8);
+      @include adaptiveValue("padding-left", 45, 10);
     }
   }
 
@@ -215,7 +226,11 @@
   &__value {}
 
   /* .item-projects__footer */
-  &__footer {}
+  &__footer {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("column-gap", 41, 18);
+  }
 
   /* .item-projects__button */
   &__button {
@@ -223,7 +238,21 @@
   }
 
   /* .item-projects__link */
-  &__link {}
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+
+    font-size: rem(12);
+    line-height: math.div(14, 12);
+    font-weight: 700;
+    color: $borderColor;
+    text-transform: uppercase;
+
+    @media (max-width:$mobile) {
+      font-size: rem(11);
+    }
+  }
 }
 
 .button {}
