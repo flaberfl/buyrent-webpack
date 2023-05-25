@@ -157,7 +157,7 @@
     line-height: math.div(26, 15);
     font-weight: 300;
 
-    span {
+    a {
       padding: 0 rem(7);
 
       border: rem(1) solid rgba(255, 255, 255, 0.12);
@@ -168,6 +168,7 @@
   /* .item-projects__specifications */
   &__specifications {
     display: inline-flex;
+    min-height: rem(70);
 
     padding: rem(10) 0;
 
@@ -179,6 +180,9 @@
   /* .item-projects__item */
 
   &__item {
+    display: grid;
+    justify-content: center;
+
     &:nth-child(1) {
       padding: 0 rem(51) 0 rem(25);
     }
@@ -190,6 +194,7 @@
     }
 
     &:nth-child(3) {
+      margin-top: rem(-3);
       padding: 0 rem(25) 0 rem(51);
     }
   }
