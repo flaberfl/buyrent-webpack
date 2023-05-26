@@ -1,6 +1,6 @@
 .services {
   @include adaptiveValue("padding-top", 120, 55);
-  padding-bottom: rem(110);
+  @include adaptiveValue("padding-bottom", 110, 70);
 
   /* .services__container */
   &__container {}
@@ -187,6 +187,10 @@
     font-weight: 300;
     line-height: math.div(28, 18);
     color: $textCoolor;
+
+    span {
+      font-weight: 600;
+    }
 
     @media (max-width:$mobile) {
       max-width: rem(450);
