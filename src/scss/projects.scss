@@ -6,8 +6,13 @@
   /* .projects__container */
   &__container {
 
+    border: 1px solid red;
+
     /* .projects__container_small */
-    &_small {}
+    &_small {
+      border: 1px solid red;
+
+    }
   }
 
   /* .projects__header */
@@ -91,7 +96,10 @@
   }
 
   /* .projects__wrapper */
-  &__wrapper {}
+  &__wrapper {
+    padding-bottom: rem(56);
+    border-bottom: 1px solid #fff;
+  }
 
   /* .projects__slide */
   &__slide {}
@@ -257,21 +265,35 @@
 }
 
 .swiper-button-prev {
-  left: rem(-126);
-  right: auto;
+  left: rem(-133);
+  // right: auto;
+
+  @media (max-width: em(1350)) {
+    left: rem(-87);
+  }
+
+  @media (max-width: em(1240)) {
+    left: rem(-42);
+  }
+
 }
 
 .swiper-button-next {
   right: rem(-133);
-  left: auto;
+  // left: auto;
 
   @media (max-width: em(1350)) {
     right: rem(-87);
   }
 
-  @media (max-width: em(1260)) {
-    right: rem(0);
-    bottom: 0;
+  @media (max-width: em(1280)) {
+    right: rem(-57);
+    // bottom: 0;
+  }
+
+  @media (max-width: em(1240)) {
+    right: 0;
+
   }
 }
 
@@ -279,7 +301,7 @@
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
+  transform: translate(0, -100%);
   @include adaptiveValue("width", 80, 68);
   @include adaptiveValue("height", 80, 68);
   display: flex;
@@ -288,6 +310,11 @@
 
   border-radius: 50%;
   border: 1.4px solid $borderColor;
+
+  @media (max-width: em(1100)) {
+    top: auto;
+    bottom: rem(-117);
+  }
 }
 
 .swiper-button-next.swiper-button-disabled,
