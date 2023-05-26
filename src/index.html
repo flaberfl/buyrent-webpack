@@ -251,7 +251,7 @@
 										<p>Возьмём апартаменты/квартиру на контроль и управление</p>
 										<p>Обеспечим заселением проживающих</p>
 										<p>Поддержим жильё в неизменном виде</p>
-										<p>2 варианта сотрудничества – Фиксированная плата за месяц или управление 40/50</p>
+										<p><span>2 варианта сотрудничества</span>– Фиксированная плата за месяц или управление 40/50</p>
 									</div>
 									<button class="services__button button">Оставить заявку</button>
 								</div>
@@ -813,6 +813,40 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__feedback feedback">
+				<div class="feedback__container">
+					<div class="feedback__question title-padding ">
+						<h2 class="feedback__title title">Задать <span>вопрос</span></h2>
+						<form action="#!" class="feedback__form form">
+							<div class="form__item form__item_name">
+								<label for="name">Ваше имя</label>
+								<input data-required="text" type="text" name="name" data-error="Ошибка"
+									data-placeholder="Владимир Иванов" placeholder="Владимир Иванов" class="input">
+							</div>
+							<div class="form__item form__item_tel">
+								<label for="tel">Номер телефона</label>
+								<input autocomplete="off" type="text" name="tel" data-error="Ошибка!" data-required="number"
+									data-placeholder="+7 (000) 000 - 00 - 00" placeholder="+7 (000) 000 - 00 - 00" class="input">
+							</div>
+							<div class="form__item form__item_text">
+								<label for="feedback-text">Текст вопроса</label>
+								<textarea name="feedback-text" id="feedback-text" cols="30"
+									rows="10">Сколько стоят ваши услуги?</textarea>
+							</div>
+							<div class="form__item form__item_send">
+								<button type="submit" class="feedback__button button">Отправить</button>
+								<div class="feedback__policy">
+									Нажимая кнопку “Отправить” вы соглашаетесь с <a href="#!">Политикой конфиденциальности</a>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="feedback__image">
+						<img src="@img/feedback/home.png" alt="Фото дома">
 					</div>
 				</div>
 			</section>

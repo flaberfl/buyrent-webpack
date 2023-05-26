@@ -1,0 +1,61 @@
+.feedback {
+
+  /* .feedback__container */
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: $darkColor;
+  }
+
+  /* .feedback__question */
+  &__question {
+    @include adaptiveValue("padding-top", 45, 30);
+  }
+
+  /* .feedback__title */
+  &__title {}
+
+  /* .feedback__form */
+  &__form {}
+
+  /* .feedback__button */
+  &__button {}
+
+  /* .feedback__policy */
+  &__policy {}
+
+  /* .feedback__image */
+  &__image {
+    position: relative;
+    background: url('@img/feedback/back-feed.jpg') 0 0 no-repeat;
+    margin-right: rem(-20);
+
+    img {
+      position: absolute;
+      max-width: 100%;
+      // right: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.form {
+
+  /* .form__item */
+  &__item {
+
+    /* .form__item_name */
+    &_name {}
+
+    /* .form__item_tel */
+    &_tel {}
+
+    /* .form__item_text */
+    &_text {}
+
+    /* .form__item_send */
+    &_send {}
+  }
+}

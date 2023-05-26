@@ -30,7 +30,7 @@ $minWidth: 320;
 
 $maxWidth: 1440;
 
-$maxWidthContainer: 1230;
+$maxWidthContainer: 1200;
 
 $containerPadding: 30;
 
@@ -173,6 +173,7 @@ body {
 @import "questions";
 @import "projects";
 @import "faq";
+@import "feedback";
 @import "footer";
 
 // Подключение стилей отдельных страниц
