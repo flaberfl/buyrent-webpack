@@ -1,7 +1,6 @@
 .projects {
   @include adaptiveValue("padding-top", 117, 56);
-
-  padding-bottom: rem(66);
+  @include adaptiveValue("padding-bottom", 66, 146);
 
   /* .projects__header */
   &__header {

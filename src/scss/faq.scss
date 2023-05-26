@@ -1,5 +1,6 @@
 .faq {
   padding-top: rem(70);
+  padding-bottom: rem(406);
 
   background-color: #1C1E27;
 
@@ -8,7 +9,9 @@
 
     /* .faq__container_small */
     &_small {
-      padding-right: rem(30);
+      @media (min-width:$tablet) {
+        padding-right: rem(30);
+      }
     }
   }
 
@@ -17,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: rem(52);
+    @include adaptiveValue("margin-bottom", 52, 32);
   }
 
   /* .faq__title */
@@ -29,16 +32,22 @@
   &__button {
     width: rem(227);
     margin-bottom: rem(26);
-  }
 
-  /* .faq__tabs	tabs */
-  &__tabs tabs {}
+    @media (max-width:$mobile) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
 
   /* .faq__tabs */
   &__tabs {
 
     display: grid;
     grid-template-columns: 53% 1fr;
+
+    @media (max-width:$mobile) {
+      grid-template-columns: 1fr;
+    }
 
     /* .faq__tabs_title */
     &_title {
@@ -60,7 +69,6 @@
 
       p {
         max-width: rem(430);
-        // flex: 1 1 auto;
       }
 
       span {
@@ -104,6 +112,10 @@
         margin-bottom: rem(20);
       }
     }
+
+    @media (max-width:$mobile) {
+      padding-left: rem(20);
+    }
   }
 }
 
@@ -120,5 +132,14 @@
   &__content {}
 
   /* .tabs__body */
-  &__body {}
+  &__body {
+
+    .faq__container_small & {
+      @media (max-width:$mobile) {
+        &:not(:last-child) {
+          margin-bottom: rem(10);
+        }
+      }
+    }
+  }
 }
