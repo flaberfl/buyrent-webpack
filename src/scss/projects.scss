@@ -3,18 +3,6 @@
 
   padding-bottom: rem(200);
 
-  /* .projects__container */
-  &__container {
-
-    // border: 1px solid red;
-
-    /* .projects__container_small */
-    &_small {
-      // border: 1px solid red;
-
-    }
-  }
-
   /* .projects__header */
   &__header {
     display: flex;
@@ -42,9 +30,6 @@
     line-height: math.div(36, 22);
     opacity: 0.8;
   }
-
-  /* .projects__body */
-  &__body {}
 
   /* .projects__tabs */
   &__tabs {
@@ -90,33 +75,7 @@
     }
   }
 
-  /* .projects__slider */
-  &__slider {
-
-    /* .projects__slider_new */
-    &_new {}
-
-    /* .projects__slider_old */
-    &_old {}
-  }
-
-  /* .projects__wrapper */
-  &__wrapper {
-    padding-bottom: rem(56);
-    // border-bottom: 1px solid #fff;
-  }
-
-  /* .projects__slide */
-  &__slide {}
-
-  /* .projects__item */
-  &__item {}
-}
-
-
-.tabs {
-
-  /* .tabs__navigation */
+  /* .project__navigation */
   &__navigation {
     margin-bottom: rem(40);
 
@@ -126,11 +85,20 @@
     }
   }
 
-  /* .tabs__title */
-  &__title {}
 
-  /* .tabs__content */
-  &__content {}
+  /* .projects__wrapper */
+  &__wrapper {
+    padding-bottom: rem(56);
+  }
+
+  /* .projects__slide */
+  &__slide {}
+
+  /* .projects__item */
+  &__item {}
+}
+
+.tabs {
 
   /* .tabs__body */
   &__body {
@@ -144,10 +112,6 @@
   &__image-ibg {
     @include adaptiveValue("margin-bottom", 18, 10);
     padding-bottom: 61.25%;
-
-    // img {
-    //   max-width: 100%;
-    // }
   }
 
   /* .item-projects__content */
@@ -204,13 +168,11 @@
     justify-content: center;
 
     &:nth-child(1) {
-      // padding: 0 rem(45) 0 rem(25);
       @include adaptiveValue("padding-right", 45, 10);
       @include adaptiveValue("padding-left", 25, 10);
     }
 
     &:nth-child(2) {
-      // padding: 0 rem(45);
       @include adaptiveValue("padding-right", 45, 10);
       @include adaptiveValue("padding-left", 45, 10);
       border-left: 1px dashed rgba(255, 255, 255, 0.07);
@@ -235,9 +197,6 @@
       font-size: rem(13);
     }
   }
-
-  /* .item-projects__value */
-  &__value {}
 
   /* .item-projects__footer */
   &__footer {
