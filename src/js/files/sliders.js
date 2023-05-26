@@ -31,6 +31,7 @@ function initSliders() {
 			observeParents: true,
 			slidesPerView: 2,
 			spaceBetween: 118,
+			slidesPerView: 'auto',
 			// autoHeight: true,
 			speed: 800,
 			// freeMode: true,
@@ -38,7 +39,7 @@ function initSliders() {
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
@@ -91,30 +92,22 @@ function initSliders() {
 					slidesPerView: 1.8,
 					spaceBetween: 30,
 				},
-				// 830: {
-				// 	slidesPerView: 2,
-				// 	spaceBetween: 20,
-				// },
 				850: {
 					slidesPerView: 2,
-					spaceBetween: 30,
+					spaceBetween: 60,
 				},
-				992: {
-					slidesPerView: 2,
-					spaceBetween: 30,
-				},
-				1180: {
-					slidesPerView: 2,
-					spaceBetween: 30,
-				},
+				// 992: {
+				// 	slidesPerView: 2,
+				// 	spaceBetween: 30,
+				// },
+				// 1180: {
+				// 	slidesPerView: 2,
+				// 	spaceBetween: 90,
+				// },
 				1280: {
 					slidesPerView: 2,
 					spaceBetween: 118,
 				},
-				// 1440: {
-				// 	slidesPerView: 2,
-				// 	spaceBetween: 118,
-				// },
 			},
 
 			// Події
