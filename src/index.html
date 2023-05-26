@@ -819,25 +819,25 @@
 
 			<section class="page__feedback feedback">
 				<div class="feedback__container">
-					<div class="feedback__question title-padding ">
+					<div class="feedback__question">
 						<h2 class="feedback__title title">Задать <span>вопрос</span></h2>
 						<form action="#!" class="feedback__form form">
-							<div class="form__item form__item_name">
+							<div class="form__line form__line_name">
 								<label for="name">Ваше имя</label>
-								<input data-required="text" type="text" name="name" data-error="Ошибка"
-									data-placeholder="Владимир Иванов" placeholder="Владимир Иванов" class="input">
+								<input data-required="text" type="text" name="name" data-error="Введите ваше имя" data-placeholder="Ваше имя"
+									placeholder="Ваше имя" class="input">
 							</div>
-							<div class="form__item form__item_tel">
+							<div class="form__line form__line_tel">
 								<label for="tel">Номер телефона</label>
-								<input autocomplete="off" type="text" name="tel" data-error="Ошибка!" data-required="number"
+								<input autocomplete="off" type="text" name="tel" data-error="Введите корректный номер телефона" data-required="number"
 									data-placeholder="+7 (000) 000 - 00 - 00" placeholder="+7 (000) 000 - 00 - 00" class="input">
 							</div>
-							<div class="form__item form__item_text">
+							<div class="form__line form__line_text">
 								<label for="feedback-text">Текст вопроса</label>
-								<textarea name="feedback-text" id="feedback-text" cols="30"
-									rows="10">Сколько стоят ваши услуги?</textarea>
+								<textarea name="feedback-text" id="feedback-text" cols="30" rows="10"
+									data-placeholder="Сколько стоят ваши услуги?" placeholder="Сколько стоят ваши услуги?"></textarea>
 							</div>
-							<div class="form__item form__item_send">
+							<div class="form__line form__line_send">
 								<button type="submit" class="feedback__button button">Отправить</button>
 								<div class="feedback__policy">
 									Нажимая кнопку “Отправить” вы соглашаетесь с <a href="#!">Политикой конфиденциальности</a>

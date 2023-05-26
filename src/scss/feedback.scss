@@ -1,42 +1,81 @@
 .feedback {
+  margin-top: rem(-295);
 
   /* .feedback__container */
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: rem(20);
 
     background-color: $darkColor;
+
+    @media (max-width:$mobile) {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* .feedback__question */
   &__question {
     @include adaptiveValue("padding-top", 45, 30);
+    padding-left: rem(56);
+    @include adaptiveValue("padding-left", 56, 0, 1440, 992, 1);
   }
 
   /* .feedback__title */
-  &__title {}
+  &__title {
+    margin-bottom: rem(14);
+  }
 
   /* .feedback__form */
-  &__form {}
+  &__form {
+
+    // @media (max-width:$mobile) {
+    //   transform: translate(calc(100vw - 94%), 0);
+    // }
+    @media (max-width:$mobile) {
+      @include adaptiveValue("padding-left", 120, 10, 767, 480, 2);
+    }
+  }
 
   /* .feedback__button */
-  &__button {}
+  &__button {
+    @include adaptiveValue("width", 240, 270);
+  }
 
   /* .feedback__policy */
-  &__policy {}
+  &__policy {
+    max-width: rem(200);
+
+    font-size: rem(11);
+    line-height: math.div(15, 11);
+    font-weight: 300;
+    color: #73767C;
+
+    span {
+      color: #fff;
+    }
+
+    @media (max-width:$mobileSmall) {
+      max-width: rem(260);
+      text-align: center;
+    }
+  }
 
   /* .feedback__image */
   &__image {
     position: relative;
-    background: url('@img/feedback/back-feed.jpg') 0 0 no-repeat;
+    background: url('@img/feedback/back-feed.jpg') center / cover no-repeat;
     margin-right: rem(-20);
 
     img {
       position: absolute;
       max-width: 100%;
-      // right: 0;
       left: 0;
       bottom: 0;
+    }
+
+    @media (max-width:$mobile) {
+      display: none;
     }
   }
 }
@@ -44,7 +83,7 @@
 .form {
 
   /* .form__item */
-  &__item {
+  &__line {
 
     /* .form__item_name */
     &_name {}
@@ -53,9 +92,27 @@
     &_tel {}
 
     /* .form__item_text */
-    &_text {}
+    &_text {
+
+      @media (min-width:$mobile) {
+        margin-bottom: rem(30) !important;
+      }
+
+    }
 
     /* .form__item_send */
-    &_send {}
+    &_send {
+      display: flex;
+      align-items: center;
+      gap: rem(25);
+
+      @media (max-width:$mobileSmall) {
+        gap: rem(18);
+      }
+
+      @media (max-width:$mobileSmall) {
+        flex-direction: column;
+      }
+    }
   }
 }
