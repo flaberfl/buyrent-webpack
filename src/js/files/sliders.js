@@ -13,7 +13,7 @@ EffectFade, Lazy, Manipulation
 // Базові стилі
 import "../../scss/base/swiper.scss";
 // Повний набір стилів з scss/libs/swiper.scss
-import "../../scss/libs/swiper.scss";
+// import "../../scss/libs/swiper.scss";
 // Повний набір стилів з node_modules
 // import 'swiper/css';
 
@@ -30,11 +30,11 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 2,
-			spaceBetween: 0,
+			spaceBetween: 118,
 			autoHeight: true,
 			speed: 800,
-			freeMode: true,
-			slidesPerView: 'auto',
+			// freeMode: true,
+	
 
 			//touchRatio: 0,
 			//simulateTouch: false,
