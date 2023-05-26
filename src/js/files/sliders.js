@@ -31,10 +31,10 @@ function initSliders() {
 			observeParents: true,
 			slidesPerView: 2,
 			spaceBetween: 118,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 800,
 			// freeMode: true,
-	
+
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -75,31 +75,39 @@ function initSliders() {
 
 			// Брейкпоінти
 			breakpoints: {
-				// 640: {
-				// 	slidesPerView: 1.5,
-				// 	spaceBetween: 30,
-				// },
-				// 768: {
-				// 	slidesPerView: 1.7,
-				// 	spaceBetween: 30,
-				// },
+				320: {
+					slidesPerView: 1.05,
+					spaceBetween: 15,
+				},
+				340: {
+					slidesPerView: 1.1,
+					spaceBetween: 15,
+				},
+				510: {
+					slidesPerView: 1.5,
+					spaceBetween: 30,
+				},
+				768: {
+					slidesPerView: 1.8,
+					spaceBetween: 30,
+				},
 				// 830: {
 				// 	slidesPerView: 2,
 				// 	spaceBetween: 20,
 				// },
-				// // 860: {
-				// // 	slidesPerView: 2,
-				// // 	spaceBetween: 30,
-				// // },
-				// 992: {
-				// 	slidesPerView: 2,
-				// 	spaceBetween: 30,
-				// },
-				// 1200: {
-				// 	slidesPerView: 2,
-				// 	spaceBetween: 60,
-				// },
-				// 1920: {
+				850: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+				},
+				992: {
+					slidesPerView: 2,
+					spaceBetween: 50,
+				},
+				1280: {
+					slidesPerView: 2,
+					spaceBetween: 118,
+				},
+				// 1440: {
 				// 	slidesPerView: 2,
 				// 	spaceBetween: 118,
 				// },

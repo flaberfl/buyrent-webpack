@@ -303,3 +303,9 @@
 }
 
 .swiper-scrollbar {}
+
+.swiper {
+  @media (max-width:$mobile) {
+    overflow: visible !important;
+  }
+}
