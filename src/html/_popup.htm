@@ -8,3 +8,62 @@
 		</div>
 	</div>
 </div> -->
+<div id="thanks-popup" aria-hidden="true" class="popup popup_show1">
+	<div class="popup__wrapper">
+		<div class="popup__content thanks-popup__content">
+			<button data-close type="button" class="popup__close"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path opacity="0.5" d="M10 1L1 10M1 1L10 10" stroke="white" stroke-linecap="square" stroke-linejoin="round" />
+				</svg></button>
+			<div class="thanks-popup__body">
+				<div class="thanks-popup__check-img">
+					<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 5L5.66667 9L15 1" stroke="white" stroke-width="2" stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+				</div>
+				<h2 class="thanks-popup__title title feedback-popup__title">Спасибо!</h2>
+				<p class="thanks-popup__text feedback-popup__text">Мы получили Вашу заявку и скоро свяжемся с Вами по указанным
+					контактам.</p>
+				<button data-close class="popup__button button">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="feedback-popup" aria-hidden="true" class="popup popup_show">
+	<div class="popup__wrapper">
+		<div class="popup__content feedback-popup__content">
+			<button data-close type="button" class="popup__close">
+				<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path opacity="0.5" d="M10 1L1 10M1 1L10 10" stroke="white" stroke-linecap="square" stroke-linejoin="round" />
+				</svg>
+			</button>
+			<div class="feedback-popup__body">
+				<h2 class="feedback-popup__title title">Обратный звонок</h2>
+				<p class="feedback-popup__text">Мы перезвоним Вам и ответим на все интересующие вас вопросы.</p>
+
+				<form class="feedback-form form" action="#" data-dev data-popup-message="#thanks-popup">
+					<div class="feedback-form__line form__line form__line_name">
+						<label for="name">Ваше имя</label>
+						<input data-required="text" type="text" name="name" data-error="Введите ваше имя"
+							data-placeholder="Ваше имя" placeholder="Ваше имя" class="input">
+					</div>
+					<div class="feedback-form__line form__line form__line_tel">
+						<label for="tel">Номер телефона</label>
+						<input autocomplete="off" type="text" name="tel" data-error="Введите корректный номер телефона"
+							data-required="number" data-placeholder="+7 (000) 000 - 00 - 00" placeholder="+7 (000) 000 - 00 - 00"
+							class="input">
+					</div>
+					<div class="feedback-form__line form__line form__line_send">
+						<button type="submit" class="popup__button button">Отправить</button>
+						<div class="feedback__policy">
+							Нажимая кнопку “Отправить” вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>

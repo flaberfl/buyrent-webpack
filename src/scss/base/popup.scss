@@ -1,6 +1,6 @@
 body::after {
 	content: "";
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(20, 22, 29, .97);
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -11,9 +11,11 @@ body::after {
 	pointer-events: none;
 	z-index: 149;
 }
+
 .popup-show body::after {
 	opacity: 1;
 }
+
 .popup {
 	position: fixed;
 	top: 0;
@@ -25,16 +27,24 @@ body::after {
 	visibility: hidden;
 	pointer-events: none;
 }
+
+.popup__close {
+	display: block;
+	margin-left: auto;
+}
+
 .popup_show {
-	z-index: 150;
+	z-index: 500;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
 }
+
 .popup_show .popup__content {
 	visibility: visible;
 	transform: scale(1);
 }
+
 .popup__wrapper {
 	display: flex;
 	flex-direction: column;
@@ -46,16 +56,97 @@ body::after {
 	justify-content: center;
 	align-items: center;
 }
+
 .popup__content {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
+	background-color: $bodyColor;
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: rem(453);
+	padding: rem(10);
+
 	.lock & {
 		visibility: visible;
 	}
+}
+
+.popup__button {
+	width: rem(176);
+	width: 100%;
+}
+
+.feedback-popup {
+	&__content {
+		margin-bottom: rem(50);
+	}
+
+	&__body {
+		margin-bottom: rem(46);
+	}
+
+	&__title {
+		font-size: rem(27);
+		line-height: math.div(65, 27);
+		font-weight: 400;
+		text-align: center;
+
+		@media (max-width:$mobile) {
+			font-size: rem(23);
+		}
+	}
+
+	&__text {
+		margin-bottom: rem(30);
+		max-width: rem(384);
+		margin-left: auto;
+		margin-right: auto;
+
+		font-size: rem(17);
+		line-height: math.div(24, 17);
+		font-weight: 300;
+		color: #9397A6;
+		text-align: center;
+
+		@media (max-width:$mobile) {
+			font-size: rem(15);
+		}
+	}
+}
+
+.feedback-form {
+	padding-left: rem(40);
+	padding-right: rem(40);
+
+	@media (max-width:$mobileSmall) {
+		padding-left: rem(20);
+		padding-right: rem(20);
+	}
+
+	&__line.form__line_tel {
+		margin-bottom: rem(34);
+	}
+}
+
+.thanks-popup__body {
+	padding-top: rem(45);
+	padding-bottom: rem(76);
+
+	text-align: center;
+}
+
+.thanks-popup__check-img {
+	width: rem(82);
+	height: rem(82);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+
+	border-radius: 50%;
+	background-color: #3099E5;
+}
+
+.thanks-popup__text {
+	margin-bottom: rem(40);
 }

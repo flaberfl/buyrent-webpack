@@ -25,6 +25,11 @@ textarea {
 	font-weight: 400;
 	color: #fff;
 
+
+	.feedback-form & {
+		border-color: #5D616D;
+	}
+
 	@media (max-width:$mobile) {
 		font-size: rem(15);
 	}

@@ -171,7 +171,9 @@ class Popup {
 	open(selectorValue) {
 		if (bodyLockStatus) {
 			// Якщо перед відкриттям попапа був режим lock
-			this.bodyLock = document.documentElement.classList.contains('lock') && !this.isOpen ? true : false;
+			// this.bodyLock = document.documentElement.classList.contains('lock') && !this.isOpen ? true : false;
+			this.bodyLock = document.documentElement.classList.contains('lock') ? true : false;
+
 
 			// Якщо ввести значення селектора (селектор настроюється в options)
 			if (selectorValue && typeof (selectorValue) === "string" && selectorValue.trim() !== "") {
