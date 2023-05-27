@@ -1,8 +1,11 @@
 .feedback {
   margin-top: rem(-295);
 
+  background-color: transparent !important;
+
   /* .feedback__container */
   &__container {
+    padding-bottom: rem(42);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: rem(20);
@@ -28,10 +31,6 @@
 
   /* .feedback__form */
   &__form {
-
-    // @media (max-width:$mobile) {
-    //   transform: translate(calc(100vw - 94%), 0);
-    // }
     @media (max-width:$mobile) {
       @include adaptiveValue("padding-left", 120, 10, 767, 480, 2);
     }
@@ -65,13 +64,13 @@
   &__image {
     position: relative;
     background: url('@img/feedback/back-feed.jpg') center / cover no-repeat;
-    margin-right: rem(-20);
+    margin-right: rem(-14);
 
     img {
       position: absolute;
       max-width: 100%;
       left: 0;
-      bottom: 0;
+      bottom: rem(-42);
     }
 
     @media (max-width:$mobile) {

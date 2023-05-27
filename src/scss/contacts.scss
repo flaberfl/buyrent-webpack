@@ -1,10 +1,26 @@
 .contacts {
+  margin-top: rem(-180);
+  @include adaptiveValue("padding-top", 322, 522);
+  // background: url('@img/map.jpg') left/cover no-repeat;
+  // position: relative;
+  position: relative;
 
   /* .contacts__container */
   &__container {
 
     /* .contacts__container_small */
     &_small {}
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    z-index: -1;
   }
 
   /* .contacts__body */
@@ -23,12 +39,15 @@
 
   /* .contacts__title */
   &__title {
-    max-width: rem(234);
     margin-bottom: rem(24);
 
     @include adaptiveValue("font-size", 29, 24);
     line-height: math.div(40, 29);
     font-weight: 400;
+
+    @media (min-width:$mobile) {
+      max-width: rem(234);
+    }
   }
 
   /* .contacts__list */
