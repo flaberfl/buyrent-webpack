@@ -55,6 +55,20 @@
 	&__error {}
 }
 
+._form-error {
+	position: relative;
+
+}
+
+.form__error {
+	position: absolute;
+	top: 100%;
+
+	font-size: rem(17);
+	font-weight: 400;
+	color: #A51616;
+}
+
 //</FORM>
 
 // <BUTTONS>
