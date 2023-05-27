@@ -2,8 +2,6 @@
   margin-top: rem(-180);
   @include adaptiveValue("padding-top", 322, 522);
   padding-bottom: rem(48);
-  // background: url('@img/map.jpg') left/cover no-repeat;
-  // position: relative;
   position: relative;
   z-index: 5;
 
@@ -29,8 +27,6 @@
   &__body {
     max-width: rem(400);
     padding: rem(42);
-    // z-index: 100;
-
     margin-left: auto;
 
     background-color: $darkColor;
@@ -74,18 +70,12 @@
     gap: rem(15);
   }
 
-  /* .contacts__line */
-  &__line {}
-
   /* .contacts__name */
   &__name {
     margin-bottom: rem(5);
 
     color: #A1A3AB;
   }
-
-  /* .contacts__value */
-  &__value {}
 
   /* .contacts__social */
   &__social {
@@ -95,10 +85,6 @@
       flex-direction: column;
       gap: rem(10);
       margin-left: 0;
-    }
-
-    @media (min-width:$mobileSmall) {
-      // display: inline-flex;
     }
   }
 

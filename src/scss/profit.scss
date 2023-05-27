@@ -4,9 +4,6 @@
 
   background: linear-gradient(180deg, #1F222C 23.17%, rgba(31, 34, 44, 0) 100%), linear-gradient(0deg, rgba(2, 11, 24, 0.78), rgba(2, 11, 24, 0.78)), url('@img/profit/bgProfit.jpg') center / cover no-repeat;
 
-  /* .profit__container */
-  &__container {}
-
   /* .profit__title */
   &__title {
     max-width: rem(630);
@@ -24,9 +21,6 @@
       row-gap: rem(30);
     }
   }
-
-  /* .profit__content */
-  &__content {}
 
   /* .profit__text */
   &__text {

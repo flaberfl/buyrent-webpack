@@ -7,10 +7,12 @@
 
 	&__line {
 
-		&:not(:last-child) {margin-bottom: rem(22);}
+		&:not(:last-child) {
+			margin-bottom: rem(22);
+		}
 
 		label {
-			padding: 0px rem(9);
+			padding: 0 rem(9);
 
 			font-size: rem(14);
 			line-height: math.div(20, 14);
@@ -19,6 +21,28 @@
 
 			@media (max-width:$mobile) {
 				font-size: rem(13);
+			}
+		}
+
+		/* .form__line_text */
+		&_text {
+			@media (min-width:$mobile) {
+				margin-bottom: rem(30) !important;
+			}
+		}
+
+		/* .form__line_send */
+		&_send {
+			display: flex;
+			align-items: center;
+			gap: rem(25);
+
+			@media (max-width:$mobileSmall) {
+				gap: rem(18);
+			}
+
+			@media (max-width:$mobileSmall) {
+				flex-direction: column;
 			}
 		}
 
