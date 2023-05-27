@@ -5,6 +5,7 @@
   // background: url('@img/map.jpg') left/cover no-repeat;
   // position: relative;
   position: relative;
+  z-index: 5;
 
   /* .contacts__container */
   &__container {
@@ -28,6 +29,7 @@
   &__body {
     max-width: rem(400);
     padding: rem(42);
+    // z-index: 100;
 
     margin-left: auto;
 

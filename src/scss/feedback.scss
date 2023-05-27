@@ -1,7 +1,9 @@
 .feedback {
   margin-top: rem(-295);
+  position: relative;
 
   background-color: transparent !important;
+  z-index: 100;
 
   /* .feedback__container */
   &__container {

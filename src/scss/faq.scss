@@ -2,6 +2,8 @@
   @include adaptiveValue("padding-top", 70, 40);
   @include adaptiveValue("padding-bottom", 406, 344);
 
+  z-index: 10;
+
   background-color: #1C1E27;
 
   /* .faq__container */
