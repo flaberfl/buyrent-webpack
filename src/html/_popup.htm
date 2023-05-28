@@ -68,14 +68,44 @@
 </div>
 
 
-<div id="quize-popup" aria-hidden="true" class="popup quize-popup">
+<div id="quize-popup" aria-hidden="true" class="popup quize-popup popup_show">
 	<div class="quize-popup__wrapper popup__wrapper">
 		<div class="quize-popup__content popup__content">
 			<button data-close type="button" class="popup__close"></button>
 			<form id="quiz-form" class="form quiz-form" action="#" method="POST" data-dev
 				data-popup-message="#quiz-thanks-popup">
 
-				<fieldset></fieldset>
+				<fieldset class="quiz-form__fieldset">
+					<div class="quiz-form__content">
+						<h3 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h3>
+						<h2 class="quize-form__title">С какой целью планируете приобрести недвижимость?</h2>
+
+					</div>
+					<div class="quiz-form__side">
+						<div class="quiz-form__manager">
+							<img src="@img/quiz/icon-photo.png" alt="Фото менеджера" class="quiz-form__icon-photo">
+							<div class="quiz-form__descr">
+								<p class="quiz-form__name">Сергей</p>
+								<p class="quiz-form__positon">АН «Buy Rent»</p>
+								<div class="quiz-form__text">
+									<p>
+										Если вы планируете переезд в Грузию, хотите купить недвижимость для ваших близких или просто иногда
+										прилетать на отдых - выбирайте первый вариант.
+									</p>
+									<p>
+										Если вы хотите инвестировать в недвижимость, выгодно перепродать или сдать в аренду - выбирайте
+										второй вариант.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="quiz-form__decor">
+							<div class="quiz-form__badge">
+								Ответьте на 5 вопросов и получите каталог ТОП 10 новостроек для инвестиций
+							</div>
+						</div>
+					</div>
+				</fieldset>
 
 
 
