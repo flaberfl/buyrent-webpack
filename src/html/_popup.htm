@@ -46,14 +46,13 @@
 				<form class="feedback-form form" action="#" data-dev data-popup-message="#thanks-popup">
 					<div class="feedback-form__line form__line form__line_name">
 						<label for="name">Ваше имя</label>
-						<input data-required="text" type="text" name="name" data-error="Введите ваше имя"
-							data-placeholder="" placeholder="" class="input">
+						<input data-required="text" type="text" name="name" data-error="Введите ваше имя" data-placeholder=""
+							placeholder="" class="input">
 					</div>
 					<div class="feedback-form__line form__line form__line_tel">
 						<label for="tel">Номер телефона</label>
 						<input autocomplete="off" type="text" name="tel" data-error="Введите корректный номер телефона"
-							data-required="number" data-placeholder="" placeholder=""
-							class="input">
+							data-required="number" data-placeholder="" placeholder="" class="input">
 					</div>
 					<div class="feedback-form__line form__line form__line_send">
 						<button type="submit" class="popup__button button">Отправить</button>
@@ -64,6 +63,23 @@
 				</form>
 
 			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="quize-popup" aria-hidden="true" class="popup quize-popup">
+	<div class="quize-popup__wrapper popup__wrapper">
+		<div class="quize-popup__content popup__content">
+			<button data-close type="button" class="popup__close"></button>
+			<form id="quiz-form" class="form quiz-form" action="#" method="POST" data-dev
+				data-popup-message="#quiz-thanks-popup">
+
+				<fieldset></fieldset>
+
+
+
+			</form>
 		</div>
 	</div>
 </div>
