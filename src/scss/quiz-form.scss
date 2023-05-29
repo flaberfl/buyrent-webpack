@@ -25,11 +25,11 @@
 }
 
 .wpcf7-radio input[type=radio]+span {
-  border: rem(4) solid transparent;
+  border: rem(3) solid transparent;
 }
 
 .wpcf7-radio input[type=radio]:checked+span {
-  border: rem(4) solid $btnColor;
+  border: rem(3) solid $btnColor;
 }
 
 .wpcf7-radio input[type=radio] {
@@ -216,7 +216,8 @@
   .wpcf7-list-item-label,
   &__label {
     display: block;
-    background: url('@img/quiz/step-1/01.jpg') 0 0 no-repeat;
+    // background: url('@img/quiz/step-1/01.jpg') 0 0 no-repeat;
+    background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-1/01.jpg') right / cover no-repeat;
     // background: linear-gradient(0deg, rgba(2, 11, 24, 0.78), rgba(2, 11, 24, 0.78)), url('@img/intro-backround.jpg') right / cover no-repeat;
     width: 100%;
     height: 100%;
