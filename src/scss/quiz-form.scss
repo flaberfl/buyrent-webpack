@@ -121,6 +121,33 @@
     gap: rem(24);
   }
 
+  &__manager {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: flex-start;
+
+    gap: rem(24)
+  }
+
+  &__descr {
+    padding-top: rem(20);
+  }
+
+  &__icon-photo {
+    @include adaptiveValue("width", 86, 58);
+  }
+
+  &__positon {
+    margin-bottom: rem(15);
+  }
+
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: rem(9);
+      }
+    }
+  }
 
   &__footer {
     display: flex;
