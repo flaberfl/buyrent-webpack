@@ -72,8 +72,9 @@
     display: flex;
     flex-direction: column;
     @include adaptiveValue("padding-top", 52, 20);
-    @include adaptiveValue("padding-bottom", 42, 30);
+    // @include adaptiveValue("padding-bottom", 42, 30);
     padding-left: rem(43);
+    padding-bottom: rem(73);
     @include adaptiveValue("padding-right", 54, 20);
 
     background-color: #14161D;
@@ -147,6 +148,10 @@
         margin-bottom: rem(9);
       }
     }
+
+    span {
+      font-weight: 700;
+    }
   }
 
   &__footer {
@@ -154,6 +159,10 @@
     align-items: center;
     justify-content: space-between;
 
+  }
+
+  &__decor {
+    padding-left: rem(18);
   }
 
   &__badge {
@@ -183,12 +192,9 @@
       left: 50%;
     }
 
-    // &::after{
-    //   content:'';
-    //   position: absolute;
-
-    //   background: url('@img/quiz/book.png') 0 0 no-repeat;
-    // }
+    span {
+      font-weight: 700;
+    }
   }
 
   &__book {
