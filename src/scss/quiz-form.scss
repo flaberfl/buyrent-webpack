@@ -169,6 +169,10 @@
     align-items: center;
     justify-content: space-between;
 
+    .quiz-form__fieldset_first & {
+      margin-top: rem(84);
+    }
+
   }
 
   &__decor {
