@@ -60,3 +60,29 @@ h2 {
   font-size: rem(16);
   font-weight: 500;
 }
+
+.manager {
+  &__name {
+    @include adaptiveValue("font-size", 24, 20);
+    font-weight: 500;
+    line-height: math.div(23, 24);
+  }
+
+  &__position {
+    @include adaptiveValue("font-size", 16, 14);
+    font-weight: 500;
+    color: #A9AFB3;
+    line-height: math.div(25, 16);
+  }
+
+  &__text {
+    font-size: rem(13);
+    font-weight: 300;
+    line-height: math.div(21, 13);
+    font-style: italic;
+
+    @media (max-width:$mobile) {
+      font-size: rem(12);
+    }
+  }
+}
