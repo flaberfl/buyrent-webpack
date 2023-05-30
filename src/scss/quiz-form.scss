@@ -240,6 +240,11 @@
       padding: 0 rem(100) rem(8) rem(17);
     }
 
+    .quiz-form__body_3items & {
+      padding: 0 0 rem(16) rem(17);
+    }
+
+
     @media (max-width:$mobile) {
       font-size: rem(14);
     }
@@ -251,15 +256,17 @@
     .step1-2 & {
       background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-1/02.jpg') center / cover no-repeat;
     }
+
     .step2-1 & {
-      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-1/01.jpg') center / cover no-repeat;
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-2/01.png') center / cover no-repeat;
     }
 
     .step2-2 & {
-      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-1/02.jpg') center / cover no-repeat;
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-2/02.jpg') center / cover no-repeat;
     }
+
     .step2-3 & {
-      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-1/03.jpg') center / cover no-repeat;
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-2/03.jpg') center / cover no-repeat;
     }
   }
 
@@ -311,6 +318,7 @@
     &_1 {
       width: rem(10);
     }
+
     &_2 {
       width: rem(81);
     }
