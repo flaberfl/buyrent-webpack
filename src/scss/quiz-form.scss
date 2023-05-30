@@ -119,6 +119,13 @@
       grid-template-columns: 1fr 1fr;
       gap: rem(40);
     }
+
+    &_number-items {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      @include adaptiveValue("row-gap", 49, 26);
+      @include adaptiveValue("colimn-gap", 43, 26);
+    }
   }
 
   &__list {}
@@ -173,6 +180,10 @@
 
     .quiz-form__fieldset_first & {
       margin-top: rem(84);
+    }
+
+    .quiz-form__fieldset_price & {
+      margin-top: rem(98);
     }
 
   }
@@ -243,6 +254,13 @@
     .quiz-form__body_3items & {
       height: rem(163);
       padding: 0 0 rem(16) rem(17);
+    }
+
+    .quiz-form__body_number-items & {
+      align-items: center;
+      padding-left: rem(17);
+
+      border: 1px solid rgba(255, 255, 255, 0.09) !important;
     }
 
 
