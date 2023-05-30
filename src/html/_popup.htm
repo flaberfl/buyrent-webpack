@@ -377,7 +377,7 @@
 
 				</fieldset>
 
-				<fieldset class="quiz-form__fieldset">
+				<fieldset style="display: none;" class="quiz-form__fieldset">
 					<div class="quiz-form__content">
 						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
 						<h3 class="quiz-form__title">Ваши предпочтения по этажам?</h3>
@@ -476,7 +476,7 @@
 
 				</fieldset>
 
-				<fieldset class="quiz-form__fieldset quiz-form__fieldset_price">
+				<fieldset style="display: none;" class="quiz-form__fieldset quiz-form__fieldset_price">
 					<div class="quiz-form__content">
 						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
 						<h3 class="quiz-form__title">Укажите ваш примерный бюджет на приобретение недвижимости?</h3>
@@ -580,6 +580,50 @@
 								Ответьте на 5 вопросов и получите <span>каталог ТОП 10</span> новостроек для инвестиций
 							</div>
 						</div>
+					</div>
+
+				</fieldset>
+
+				<fieldset class="quiz-form__fieldset quiz-form__fieldset_finish">
+					<div class="quiz-form__content">
+						<h3 class="quiz-form__title quiz-form__title_finish">Заполните форму, и мы отправим Вам актуальный каталог с
+							лучшими объектами по вашим запросам</h3>
+						<div class="quiz-form__submit-form">
+
+							<div class="quiz-form__line form__line quiz-form__line_name">
+								<label class="form__label quiz-form__label" for="name">Ваше имя</label>
+								<input autocomplete="off" type="text" name="name" data-error="Введите имя" placeholder="" class="input">
+							</div>
+							<div class="quiz-form__line form__line quiz-form__line_social">
+								<input autocomplete="off" type="text" name="social"
+									data-error="Введите Телефон или мессенджер WhatsApp/Telegram"
+									placeholder="Телефон или мессенджер WhatsApp/Telegram" class="input">
+							</div>
+
+							<button type="submit" class="quiz-form__button quiz-form__button_send button button_blue">Получить
+								каталог<svg width="18" height="8" viewBox="0 0 18 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M17.3536 4.35355C17.5488 4.15829 17.5488 3.84171 17.3536 3.64645L14.1716 0.464467C13.9763 0.269205 13.6597 0.269205 13.4645 0.464467C13.2692 0.659729 13.2692 0.976312 13.4645 1.17157L16.2929 4L13.4645 6.82843C13.2692 7.02369 13.2692 7.34027 13.4645 7.53554C13.6597 7.7308 13.9763 7.7308 14.1716 7.53554L17.3536 4.35355ZM-4.37114e-08 4.5L17 4.5L17 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
+										fill="white" />
+								</svg>
+							</button>
+						</div>
+
+					</div>
+					<div class="quiz-form__right">
+
+						<div class="quiz-form__descr">
+							<p class="quiz-form__name manager__name">Сергей</p>
+							<p class="quiz-form__positon manager__position">АН «Buy Rent»</p>
+							<div class="quiz-form__text manager__text">
+								<p>
+									Вы почти у цели. Заполните форму и мы вышлем вам каталог лучших объектов!</p>
+							</div>
+						</div>
+
+						<img style="display: none;" src="@img/buy-home/book.png" alt="Книга" class="quiz-form__book-img">
+						<img style="display: none;" src="@img/buy-home/man.png" alt="Фото директора" class="quiz-form__director">
+
 					</div>
 
 				</fieldset>

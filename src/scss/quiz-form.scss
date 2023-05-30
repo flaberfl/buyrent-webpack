@@ -30,8 +30,7 @@
 }
 
 .wpcf7-radio.step5 input[type=radio]+span {
-  // border: rem(3) solid $darkColor;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: rem(1) solid rgba(255, 255, 255, 0.09);
 }
 
 .wpcf7-radio input[type=radio]:checked+span {
@@ -72,6 +71,10 @@
     // min-height: 100%;
     display: grid;
     grid-template-columns: 1fr 41.544%;
+
+    &_finish {
+      grid-template-columns: 42% auto;
+    }
   }
 
   &__content {
@@ -84,6 +87,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    .quiz-form__fieldset_finish & {
+      padding-top: rem(79);
+      padding-right: 0;
+      padding-bottom: rem(91);
+    }
   }
 
   &__side {
@@ -114,6 +123,7 @@
     @include adaptiveValue("font-size", 25, 17);
     line-height: math.div(33, 25);
     font-weight: 500;
+    opacity: .8;
   }
 
   &__body {
@@ -145,6 +155,10 @@
     width: rem(163);
     height: rem(61);
     gap: rem(24);
+
+    &_send {
+      @include adaptiveValue("width", 383, 260);
+    }
   }
 
   &__manager {
@@ -320,6 +334,39 @@
       // border: 1px solid rgba(255, 255, 255, 0.09) !important;
     }
 
+  }
+
+  &__label {
+    font-size: rem(12) !important;
+    line-height: math.div(18, 12) !important;
+  }
+
+  &__line {
+
+    &_name {
+      margin-bottom: rem(40) !important;
+
+      input {
+        height: rem(45);
+      }
+    }
+
+    &_social {
+      margin-bottom: rem(40) !important;
+
+      input {
+        height: auto;
+        padding-top: 0;
+        padding-bottom: rem(21);
+      }
+
+      input::placeholder {
+
+        font-size: rem(15);
+        line-height: math.div(22, 15);
+        color: #8A8C92;
+      }
+    }
   }
 
 
