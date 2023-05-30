@@ -79,9 +79,9 @@
 					<div class="quiz-form__content">
 						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
 						<h3 class="quiz-form__title">С какой целью планируете приобрести недвижимость?</h3>
-						<div class="quiz-form__body quiz-form__body_start">
+						<div class="quiz-form__body quiz-form__body_2items">
 
-							<span class="wpcf7-form-control wpcf7-radio quiz-form__list">
+							<!-- <span class="wpcf7-form-control wpcf7-radio">
 
 								<span class="wpcf7-list-item quiz-form__item">
 
@@ -96,7 +96,7 @@
 
 								<span class="wpcf7-list-item quiz-form__item">
 									<label>
-										<input type="radio" name="radio-998" value="Для комфортной и безопасной жизни">
+										<input id="target" type="radio" name="radio-998" value="Для комфортной и безопасной жизни">
 										<span class="wpcf7-list-item-label quiz-form__label">
 											Текст Радиокнопки
 										</span>
@@ -104,7 +104,37 @@
 
 								</span>
 
+							</span> -->
+							<span class="wpcf7-form-control wpcf7-radio step1-1">
+
+								<span class="wpcf7-list-item">
+
+									<label>
+										<input type="radio" name="target" value="Для комфортной и безопасной жизни">
+										<span class="wpcf7-list-item-label quiz-form__label">
+											Для комфортной и безопасной жизни
+										</span>
+									</label>
+
+								</span>
+
 							</span>
+
+							<span class="wpcf7-form-control wpcf7-radio step1-2">
+
+								<span class="wpcf7-list-item">
+
+									<label>
+										<input type="radio" name="target" value="Для инвестиций с доходностью 8%">
+										<span class="wpcf7-list-item-label quiz-form__label">
+											Для инвестиций с доходностью 8%
+										</span>
+									</label>
+
+								</span>
+
+							</span>
+
 
 						</div>
 						<div class="quiz-form__footer">
@@ -117,14 +147,15 @@
 									<div class="progress-quiz-form__line progress-quiz-form__line_1"></div>
 								</div>
 							</div>
-							<button class="quiz-form__button button button_blue">Далее
-								<svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+							<button class="quiz-form__button button button_blue">Далее<svg width="18" height="9" viewBox="0 0 18 9"
+									fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M17.3536 4.85355C17.5488 4.65829 17.5488 4.34171 17.3536 4.14645L14.1716 0.964467C13.9763 0.769205 13.6597 0.769205 13.4645 0.964467C13.2692 1.15973 13.2692 1.47631 13.4645 1.67157L16.2929 4.5L13.4645 7.32843C13.2692 7.52369 13.2692 7.84027 13.4645 8.03554C13.6597 8.2308 13.9763 8.2308 14.1716 8.03554L17.3536 4.85355ZM-4.37114e-08 5L17 5L17 4L4.37114e-08 4L-4.37114e-08 5Z"
 										fill="white" />
 								</svg>
-
 							</button>
+
 						</div>
 					</div>
 					<div class="quiz-form__side">
@@ -135,7 +166,8 @@
 								<p class="quiz-form__positon manager__position">АН «Buy Rent»</p>
 								<div class="quiz-form__text manager__text">
 									<p>
-										Если вы планируете переезд в Грузию, хотите купить недвижимость для ваших близких или просто иногда
+										Если вы планируете переезд в Грузию, хотите купить недвижимость для ваших близких или просто
+										иногда
 										прилетать на отдых - <span>выбирайте первый вариант.</span>
 									</p>
 									<p>
@@ -152,6 +184,105 @@
 							</div>
 						</div>
 					</div>
+
+				</fieldset>
+
+				<fieldset class="quiz-form__fieldset">
+					<div class="quiz-form__content">
+						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
+						<h3 class="quiz-form__title">Какой тип жилья вы рассматриваете для покупки?</h3>
+						<div class="quiz-form__body">
+
+							<span class="wpcf7-form-control wpcf7-radio step2-1">
+
+								<span class="wpcf7-list-item">
+
+									<label>
+										<input type="radio" name="target" value="Новостройка">
+										<span class=" wpcf7-list-item-label quiz-form__label">
+											Новостройка
+										</span>
+									</label>
+								</span>
+
+							</span>
+							<span class="wpcf7-form-control wpcf7-radio step2-2">
+
+								<span class="wpcf7-list-item">
+
+									<label>
+										<input type="radio" name="target" value="Вторичное жильё">
+										<span class="wpcf7-list-item-label quiz-form__label">
+											Вторичное жильё
+										</span>
+									</label>
+
+								</span>
+
+							</span>
+							<span class="wpcf7-form-control wpcf7-radio step2-3">
+
+								<span class="wpcf7-list-item">
+
+									<label>
+										<input type="radio" name="target" value="Таунхаус/Вилла>
+										<span class=" wpcf7-list-item-label quiz-form__label">
+										Таунхаус/Вилла
+								</span>
+								</label>
+
+							</span>
+
+
+						</div>
+						<div class="quiz-form__footer">
+							<div class="quiz-form__progress progress-quiz-form">
+								<div class="progress-quiz-form__answer">
+									<p>Вопрос</p>
+									<div class="progress-quiz-form__number">2<span></span>5</div>
+								</div>
+								<div class="progress-quiz-form__bar">
+									<div class="progress-quiz-form__line progress-quiz-form__line_2"></div>
+								</div>
+							</div>
+
+							<button class="quiz-form__button button button_blue">Далее<svg width="18" height="9" viewBox="0 0 18 9"
+									fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M17.3536 4.85355C17.5488 4.65829 17.5488 4.34171 17.3536 4.14645L14.1716 0.964467C13.9763 0.769205 13.6597 0.769205 13.4645 0.964467C13.2692 1.15973 13.2692 1.47631 13.4645 1.67157L16.2929 4.5L13.4645 7.32843C13.2692 7.52369 13.2692 7.84027 13.4645 8.03554C13.6597 8.2308 13.9763 8.2308 14.1716 8.03554L17.3536 4.85355ZM-4.37114e-08 5L17 5L17 4L4.37114e-08 4L-4.37114e-08 5Z"
+										fill="white" />
+								</svg>
+							</button>
+
+						</div>
+					</div>
+					<div class="quiz-form__side">
+						<div class="quiz-form__manager">
+							<img src="@img/quiz/icon-photo.png" alt="Фото менеджера" class="quiz-form__icon-photo">
+							<div class="quiz-form__descr">
+								<p class="quiz-form__name manager__name">Сергей</p>
+								<p class="quiz-form__positon manager__position">АН «Buy Rent»</p>
+								<div class="quiz-form__text manager__text">
+									<p>
+										Если вы планируете переезд в Грузию, хотите купить недвижимость для ваших близких или просто
+										иногда
+										прилетать на отдых - <span>выбирайте первый вариант.</span>
+									</p>
+									<p>
+										Если вы хотите инвестировать в недвижимость, выгодно перепродать или сдать в аренду -
+										<span>выбирайте второй вариант.</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="quiz-form__decor">
+							<div class="quiz-form__badge">
+								<img class="quiz-form__book" src="@img/quiz/book.png" alt="Книга">
+								Ответьте на 5 вопросов и получите <span>каталог ТОП 10</span> новостроек для инвестиций
+							</div>
+						</div>
+					</div>
+
 				</fieldset>
 
 

@@ -3,11 +3,13 @@
   position: absolute;
   content: '';
   border-radius: 100%;
-  height: 30px;
-  width: 30px;
-  top: 0px;
-  left: 0px;
+
+  @include adaptiveValue("height", 40, 32);
+  @include adaptiveValue("width", 40, 32);
+  top: rem(14);
+  right: rem(-9);
   background: #fff;
+  background: url('@img/quiz/icon-n_active.svg') center / cover no-repeat;
 }
 
 // .wpcf7-form .wpcf7-radio input[type=radio]:checked+span:after {
@@ -20,12 +22,11 @@
 //   visibility: hidden;
 // }
 .wpcf7-radio input[type=radio]:checked+span:after {
-  background: #FA982F;
   visibility: visible;
 }
 
 .wpcf7-radio input[type=radio]+span {
-  border: rem(3) solid transparent;
+  border: rem(3) solid $darkColor;
 }
 
 .wpcf7-radio input[type=radio]:checked+span {
@@ -38,16 +39,18 @@
 }
 
 .wpcf7-radio input[type="radio"]+span:after {
-  display: block;
+  background: url('@img/quiz/icon-active.svg') center / cover no-repeat;
+  // display: block;
   position: absolute;
   content: '';
-  border-radius: 100%;
-  height: 14px;
-  width: 14px;
-  top: 8px;
-  left: 8px;
+  // border-radius: 100%;
+  @include adaptiveValue("height", 40, 32);
+  @include adaptiveValue("width", 40, 32);
+  top: rem(14);
+  right: rem(-9);
+
   visibility: hidden;
-  transition: all .2s ease-in 0s;
+  // transition: all .2s ease-in 0s;
 }
 
 .wpcf7-radio label {
@@ -104,27 +107,25 @@
     @include adaptiveValue("font-size", 25, 17);
     line-height: math.div(33, 25);
     font-weight: 500;
-
   }
 
   &__body {
     flex: 1 1 auto;
-  }
-
-  &__list {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: rem(44);
 
-    .quiz-form__body_start & {
+    &_2items {
       grid-template-columns: 1fr 1fr;
       gap: rem(40);
-
-      height: rem(175);
     }
   }
 
-  &__list {
-    position: relative;
-  }
+  &__list {}
+
+  // &__list {
+  //   position: relative;
+  // }
 
   &__button {
     width: rem(163);
@@ -168,6 +169,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: rem(80);
 
     .quiz-form__fieldset_first & {
       margin-top: rem(84);
@@ -219,10 +221,11 @@
 
   .wpcf7-list-item-label,
   &__label {
-    display: block;
-    // background: url('@img/quiz/step-1/01.jpg') 0 0 no-repeat;
-    background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-1/01.jpg') center / cover no-repeat;
-    // background: linear-gradient(0deg, rgba(2, 11, 24, 0.78), rgba(2, 11, 24, 0.78)), url('@img/intro-backround.jpg') right / cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    height: rem(163);
+    padding: 0;
+
     width: 100%;
     height: 100%;
 
@@ -232,8 +235,31 @@
 
     transition: all 0.3s ease 0s;
 
+    .quiz-form__body_2items & {
+      height: rem(167);
+      padding: 0 rem(100) rem(8) rem(17);
+    }
+
     @media (max-width:$mobile) {
       font-size: rem(14);
+    }
+
+    .step1-1 & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-1/01.jpg') center / cover no-repeat;
+    }
+
+    .step1-2 & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-1/02.jpg') center / cover no-repeat;
+    }
+    .step2-1 & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-1/01.jpg') center / cover no-repeat;
+    }
+
+    .step2-2 & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-1/02.jpg') center / cover no-repeat;
+    }
+    .step2-3 & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-1/03.jpg') center / cover no-repeat;
     }
   }
 
@@ -284,6 +310,9 @@
 
     &_1 {
       width: rem(10);
+    }
+    &_2 {
+      width: rem(81);
     }
   }
 }
