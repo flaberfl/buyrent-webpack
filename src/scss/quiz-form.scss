@@ -186,6 +186,10 @@
       &:not(:last-child) {
         margin-bottom: rem(9);
       }
+
+      .quiz-form__right & {
+        max-width: rem(230);
+      }
     }
 
     span {
@@ -336,6 +340,11 @@
 
   }
 
+  &__right {
+    padding-left: rem(151);
+    padding-top: rem(58);
+  }
+
   &__label {
     font-size: rem(12) !important;
     line-height: math.div(18, 12) !important;
@@ -358,6 +367,7 @@
         height: auto;
         padding-top: 0;
         padding-bottom: rem(21);
+        border-bottom: 0.2rem solid #D1D6DE;
       }
 
       input::placeholder {
@@ -369,6 +379,18 @@
     }
   }
 
+
+  &__book-img {
+    position: absolute;
+    left: 36%;
+    top: 36%;
+  }
+
+  &__director {
+    position: absolute;
+    bottom: rem(-36);
+    right: rem(-71);
+  }
 
 }
 
