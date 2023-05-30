@@ -29,8 +29,17 @@
   border: rem(3) solid $darkColor;
 }
 
+.wpcf7-radio.step5 input[type=radio]+span {
+  // border: rem(3) solid $darkColor;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
 .wpcf7-radio input[type=radio]:checked+span {
   border: rem(3) solid $btnColor;
+}
+
+.wpcf7-radio.step5 input[type=radio]:checked+span {
+  border: rem(1) solid $btnColor;
 }
 
 .wpcf7-radio input[type=radio] {
@@ -40,10 +49,8 @@
 
 .wpcf7-radio input[type="radio"]+span:after {
   background: url('@img/quiz/icon-active.svg') center / cover no-repeat;
-  // display: block;
   position: absolute;
   content: '';
-  // border-radius: 100%;
   @include adaptiveValue("height", 40, 32);
   @include adaptiveValue("width", 40, 32);
   top: rem(14);
@@ -185,7 +192,6 @@
     .quiz-form__fieldset_price & {
       margin-top: rem(98);
     }
-
   }
 
   &__decor {
@@ -259,10 +265,7 @@
     .quiz-form__body_number-items & {
       align-items: center;
       padding-left: rem(17);
-
-      border: 1px solid rgba(255, 255, 255, 0.09) !important;
     }
-
 
     @media (max-width:$mobile) {
       font-size: rem(14);
@@ -311,6 +314,12 @@
     .step4-3 & {
       background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-4/03.jpg') center / cover no-repeat;
     }
+
+    .step5-3 & {
+      // background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-4/03.jpg') center / cover no-repeat;
+      // border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    }
+
   }
 
 
@@ -359,19 +368,23 @@
     background-color: #A48B6C;
 
     &_1 {
-      width: rem(10);
+      width: 2.48%;
     }
 
     &_2 {
-      width: rem(81);
+      width: 20.09%;
     }
 
     &_3 {
-      width: rem(163);
+      width: 40.44%;
     }
 
     &_4 {
-      width: rem(246);
+      width: 61.04%;
+    }
+
+    &_5 {
+      width: 100%;
     }
   }
 }
