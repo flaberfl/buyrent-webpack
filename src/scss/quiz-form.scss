@@ -269,6 +269,30 @@
     .step2-3 & {
       background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-2/03.jpg') center / cover no-repeat;
     }
+
+    .step3-1 & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-2/01.png') center / cover no-repeat;
+    }
+
+    .step3-2 & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-2/02.jpg') center / cover no-repeat;
+    }
+
+    .step3-3 & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-2/03.jpg') center / cover no-repeat;
+    }
+
+    .step4-1 & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-4/01.jpg') center / cover no-repeat;
+    }
+
+    .step4-2 & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-4/02.jpg') center / cover no-repeat;
+    }
+
+    .step4-3 & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-4/03.jpg') center / cover no-repeat;
+    }
   }
 
 
@@ -322,6 +346,10 @@
 
     &_2 {
       width: rem(81);
+    }
+
+    &_3 {
+      width: rem(163);
     }
 
     &_4 {
