@@ -71,9 +71,20 @@
     // min-height: 100%;
     display: grid;
     grid-template-columns: 1fr 41.544%;
+    // opacity: 0;
+    // display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: -20;
 
     &_finish {
       grid-template-columns: 42% auto;
+    }
+
+    &._active {
+      opacity: 1;
+      position: relative;
+      z-index: 100;
     }
   }
 
@@ -223,6 +234,10 @@
   &__badge {
     position: relative;
     padding: rem(29) rem(26) rem(29) rem(133);
+    @include adaptiveValue("padding-top", 29, 10);
+    @include adaptiveValue("padding-right", 26, 10);
+    @include adaptiveValue("padding-bottom", 29, 10);
+    @include adaptiveValue("padding-left", 133, 50);
 
     background-color: $hoverColor;
     border-radius: rem(600);

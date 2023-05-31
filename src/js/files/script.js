@@ -40,3 +40,25 @@ window.addEventListener('scroll', function () {
     remove_class_on_scroll()
   }
 })
+
+// Скрипт квиза
+const quiz = document.getElementById('quiz-form');
+const quizItems = quiz.querySelectorAll('.quiz-form__fieldset');
+const btnsNext = quiz.querySelectorAll('.button_next');
+
+quizItems.forEach((quizItem, quizeItemIndex) => {
+  if (quizeItemIndex === 0) {
+    quizItem.classList.add('_active');
+  } else {
+    quizItem.classList.remove('_active');
+  }
+});
+
+btnsNext.forEach((btn, btnIndex) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    quizItems[btnIndex].classList.remove('_active');
+    quizItems[btnIndex + 1].classList.add('_active');
+  });
+
+});
