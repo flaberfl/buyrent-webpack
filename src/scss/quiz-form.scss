@@ -81,6 +81,11 @@
       grid-template-columns: 42% auto;
     }
 
+    &._send {
+      opacity: 1;
+      position: relative;
+    }
+
     &._active {
       opacity: 1;
       position: relative;
@@ -89,7 +94,6 @@
   }
 
   &__content {
-
     @include adaptiveValue("padding-top", 52, 20);
     @include adaptiveValue("padding-left", 68, 20);
     @include adaptiveValue("padding-bottom", 42, 30);
@@ -366,15 +370,17 @@
     position: relative;
   }
 
-  &__label {
-    font-size: rem(12) !important;
-    line-height: math.div(18, 12) !important;
-  }
+  &__label {}
 
   &__line {
 
     &_name {
       margin-bottom: rem(40) !important;
+
+      .form__label {
+        font-size: rem(12);
+        line-height: math.div(18, 12);
+      }
 
       input {
         height: rem(45);
