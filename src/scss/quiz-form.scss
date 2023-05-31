@@ -74,15 +74,16 @@
     // opacity: 0;
     // display: none;
     position: absolute;
-    opacity: 0;
+    // opacity: 0;
     z-index: -20;
+    transition: all 0.3s ease 0s;
 
     &_finish {
       grid-template-columns: 42% auto;
     }
 
     &._active {
-      opacity: 1;
+      // opacity: 1;
       position: relative;
       z-index: 100;
     }
