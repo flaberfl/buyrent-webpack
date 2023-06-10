@@ -81,9 +81,11 @@
       grid-template-columns: 42% auto;
     }
 
-    &._send {
+    &_send {
+      grid-template-columns: 1fr 54.444%;
       opacity: 1;
       position: relative;
+      z-index: 100;
     }
 
     &._active {
@@ -490,11 +492,12 @@
 
 .quiz-thanks-popup__book-img {
   position: absolute;
-  bottom: rem(-30);
-  left: rem(-20);
+  bottom: rem(-9);
+  left: rem(-90);
 }
 
 .quiz-thanks-popup__text {
+  max-width: rem(424);
   font-size: rem(16);
   line-height: math.div(26, 16);
   font-weight: 300;
@@ -508,4 +511,5 @@
 .quiz-thanks-popup__content {
   gap: rem(19);
   justify-content: center;
+  padding-bottom: rem(180);
 }
