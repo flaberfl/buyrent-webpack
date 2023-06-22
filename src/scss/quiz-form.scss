@@ -77,8 +77,8 @@
     display: grid;
     grid-template-columns: 1fr 41.544%;
     // display: none;
-    // position: absolute;
-    // opacity: 0;
+    position: absolute;
+    opacity: 0;
     z-index: -20;
     transition: all 0.3s ease 0s;
 
@@ -290,6 +290,14 @@
     height: rem(61);
     gap: rem(24);
 
+    &:disabled {
+      opacity: .3;
+
+      &:hover{
+        background-color: red;
+      }
+    }
+
     @media (max-width: em(360)) {
       width: 100%;
     }
@@ -299,7 +307,6 @@
       width: rem(383);
 
       @media (max-width:em(440)) {
-        // width: rem(260);
         width: 100%;
       }
 

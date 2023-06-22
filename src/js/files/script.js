@@ -62,4 +62,22 @@ btnsNext.forEach((btn, btnIndex) => {
     quizItems[btnIndex + 1].classList.add('_active');
   });
 
+  btn.disabled = true;
+
+});
+
+quizItems.forEach((quizItem, quizItemIndex) => {
+
+  quizItem.addEventListener('change', (e) => {
+    const target = e.target;
+    const inputsChecked = quizItem.querySelectorAll('input:checked');
+
+    if (inputsChecked.length > 0) {
+      // разблокировать кнопку именно эту
+      btnsNext[quizItemIndex].disabled = false;
+    } else {
+      // заблокировать эту кнопку
+      btnsNext[quizItemIndex].disabled = true;
+    }
+  })
 });
