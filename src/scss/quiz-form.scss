@@ -92,6 +92,16 @@
 
     &_finish {
       grid-template-columns: 42% auto;
+
+      @media (max-width:em(1000)) {
+
+        overflow: hidden;
+      }
+
+      @media (max-width: em(500)) {
+        min-height: rem(940);
+        // height: rem(940);
+      }
     }
 
     &_send {
@@ -124,9 +134,14 @@
     justify-content: space-between;
 
     .quiz-form__fieldset_finish & {
-      padding-top: rem(79);
+      // padding-top: rem(79);
+      @include adaptiveValue("padding-top", 79, 45);
       padding-right: 0;
       padding-bottom: rem(91);
+
+      @media (max-width:$tablet) {
+        padding-right: rem(20);
+      }
     }
   }
 
@@ -142,10 +157,6 @@
     @include adaptiveValue("padding-right", 54, 20, 1230, 991, 1);
 
     background-color: #14161D;
-
-    // @media (max-width:$tablet){
-
-    // }
   }
 
   &__slogan {
@@ -186,6 +197,10 @@
 
     &_finish {
       flex: 0 1 auto;
+
+      @media (max-width:$tablet) {
+        // margin-bottom: rem(20);
+      }
     }
   }
 
@@ -251,8 +266,14 @@
     }
 
     &_send {
-      // @include adaptiveValue("width", 383, 260);
+      // @include adaptiveValue("width", 383, 260, 767, 360);
       width: rem(383);
+
+      @media (max-width:em(440)) {
+        // width: rem(260);
+        width: 100%;
+      }
+
     }
   }
 
@@ -463,7 +484,9 @@
   &__line {
 
     &_name {
-      margin-bottom: rem(40) !important;
+      // margin-bottom: rem(40) !important;
+      @include adaptiveValue("margin-bottom", 40, 22);
+
 
       .form__label {
         font-size: rem(12);
@@ -504,12 +527,42 @@
       left: 30%;
       top: -85%;
     }
+
+    @media (max-width:$mobile) {
+      top: -60%;
+    }
   }
 
   &__director {
     position: absolute;
     bottom: rem(-36);
     right: rem(-71);
+    max-width: 100%;
+
+    @media (max-width:$tablet) {
+      width: 61%;
+      bottom: rem(-61);
+      // bottom: 20%;
+    }
+
+    @media (max-width: em(500)) {
+      display: none;
+    }
+
+    &_mobile {
+      display: none;
+
+      @media (max-width: em(500)) {
+        // position: absolute;
+        position: relative;
+        bottom: rem(-67);
+        display: block;
+        z-index: 100;
+        // height: 100%;
+        // bottom: 0;
+        right: -190px;
+      }
+    }
   }
 
   &__check {
@@ -520,6 +573,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__submit-form {
+    @media (min-width: em(441)) and (max-width: em(650)) {
+      margin: 0 auto;
+    }
   }
 }
 
