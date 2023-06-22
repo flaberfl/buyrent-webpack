@@ -222,6 +222,10 @@
       @include adaptiveValue("row-gap", 49, 26);
       @include adaptiveValue("colimn-gap", 43, 26);
       flex: 1 1 auto;
+
+      @media (max-width: em(580)) {
+        grid-template-columns: auto;
+      }
     }
   }
 
