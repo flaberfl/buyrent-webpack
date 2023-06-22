@@ -86,6 +86,10 @@
       height: rem(550);
     }
 
+    @media (max-width:$tablet) {
+      padding-bottom: rem(26);
+    }
+
     &_finish {
       grid-template-columns: 42% auto;
     }
@@ -129,14 +133,19 @@
   &__side {
     display: flex;
     flex-direction: column;
-    @include adaptiveValue("padding-top", 52, 20);
-    // @include adaptiveValue("padding-bottom", 42, 30);
+    @include adaptiveValue("padding-top", 52, 0);
+
     padding-left: rem(43);
+    @include adaptiveValue("padding-left", 43, 20, 1230, 991, 1);
     padding-bottom: rem(73);
-    @include adaptiveValue("padding-bottom", 73, 0, 1230, 991, 2);
-    @include adaptiveValue("padding-right", 54, 20);
+    @include adaptiveValue("padding-bottom", 73, 20, 1230, 991, 2);
+    @include adaptiveValue("padding-right", 54, 20, 1230, 991, 1);
 
     background-color: #14161D;
+
+    // @media (max-width:$tablet){
+
+    // }
   }
 
   &__slogan {
@@ -299,6 +308,10 @@
 
   &__decor {
     padding-left: rem(18);
+
+    @media (max-width:$tablet) {
+      display: none;
+    }
   }
 
   &__badge {
