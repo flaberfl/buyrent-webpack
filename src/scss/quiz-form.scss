@@ -251,7 +251,8 @@
     }
 
     &_send {
-      @include adaptiveValue("width", 383, 260);
+      // @include adaptiveValue("width", 383, 260);
+      width: rem(383);
     }
   }
 
@@ -452,6 +453,7 @@
 
   &__right {
     padding-left: rem(151);
+    @include adaptiveValue("padding-left", 151, 20, 1230, 991, 1);
     padding-top: rem(58);
     position: relative;
   }
@@ -494,8 +496,14 @@
 
   &__book-img {
     position: absolute;
-    left: 36%;
+    // left: 36%;
+    left: -10%;
     top: 36%;
+
+    @media (max-width:$tablet) {
+      left: 30%;
+      top: -85%;
+    }
   }
 
   &__director {
