@@ -110,6 +110,19 @@
       opacity: 1;
       position: relative;
       z-index: 100;
+
+      @media (max-width: em(1360)) {
+        overflow: hidden;
+      }
+
+      @media (max-width:$tablet) {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      @media (max-width:$mobile) {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr 1fr;
+      }
     }
 
     &._active {
@@ -199,13 +212,24 @@
       text-align: center;
     }
 
+    .quiz-form__fieldset_send & {
+      @media (min-width:$mobile) and (max-width:$tablet) {
+        text-align: left;
+      }
+    }
 
     &_finish {
       flex: 0 1 auto;
 
       @media (max-width:$tablet) {
         // margin-bottom: rem(20);
+
       }
+
+      @media (max-width:$mobile) {
+        margin: 0;
+      }
+
     }
   }
 
@@ -596,6 +620,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width:$mobile) {
+      margin: 0 auto;
+    }
   }
 
   &__submit-form {
@@ -673,6 +701,28 @@
   position: absolute;
   bottom: rem(-9);
   left: rem(-90);
+
+  @media (max-width: em(1360)) {
+    left: rem(-110);
+  }
+
+  @media (max-width:$tablet) {
+    width: 95%;
+    left: 0;
+    top: 30%;
+    // transform: translate(0, 130%);
+  }
+
+  @media (max-width:$mobile) {
+    width: 90%;
+    left: 50%;
+    top: -6%;
+    transform: translate(-50%, 0);
+  }
+
+  @media (max-width:$mobileSmall) {
+    width: 163%;
+  }
 }
 
 .quiz-thanks-popup__text {
@@ -684,11 +734,17 @@
 
   @media (max-width:$mobile) {
     font-size: rem(15);
+    max-width: none;
+
+    text-align: center;
   }
 }
 
 .quiz-thanks-popup__content {
   gap: rem(19);
   justify-content: center;
-  padding-bottom: rem(180);
+
+  @media (min-width:$tablet) {
+    padding-bottom: rem(180);
+  }
 }
