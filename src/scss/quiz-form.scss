@@ -38,7 +38,7 @@
 }
 
 .wpcf7-radio.step1-1 {
-  @media (min-width:em(580)) and (max-width:$tablet) {
+  @media (min-width:em(581)) and (max-width:$tablet) {
     grid-column-start: 2;
   }
 }
@@ -73,7 +73,6 @@
 .quiz-form {
 
   &__fieldset {
-    height: rem(550);
     // min-height: 100%;!
     display: grid;
     grid-template-columns: 1fr 41.544%;
@@ -82,6 +81,10 @@
     // opacity: 0;
     z-index: -20;
     transition: all 0.3s ease 0s;
+
+    @media (min-width:$tablet) {
+      height: rem(550);
+    }
 
     &_finish {
       grid-template-columns: 42% auto;
@@ -143,16 +146,34 @@
     line-height: math.div(29, 16);
     font-weight: 400;
     color: #9FA0A5;
+
+    @media (max-width:$tablet) {
+      margin: 0 auto rem(10);
+    }
+
+    @media (max-width: em(580)) {
+      margin-top: rem(20);
+      text-align: center;
+    }
   }
 
   &__title {
-    max-width: rem(620);
-    flex: 1 1 auto;
 
     @include adaptiveValue("font-size", 25, 17);
     line-height: math.div(33, 25);
     font-weight: 500;
     opacity: .8;
+
+    @media (min-width:$tablet) {
+      flex: 1 1 auto;
+      max-width: rem(620);
+    }
+
+    @media (max-width:$tablet) {
+      margin: 0 auto rem(30);
+      text-align: center;
+    }
+
 
     &_finish {
       flex: 0 1 auto;
@@ -174,7 +195,7 @@
         grid-template-columns: 1fr auto auto 1fr;
       }
 
-      @media (max-width: em(579)) {
+      @media (max-width: em(580)) {
         grid-template-columns: auto;
         justify-content: center;
       }
@@ -191,6 +212,12 @@
 
   &__list {}
 
+  &__progress {
+    @media (max-width: em(580)) {
+      margin: 0 auto;
+    }
+  }
+
   // &__list {
   //   position: relative;
   // }
@@ -199,6 +226,10 @@
     width: rem(163);
     height: rem(61);
     gap: rem(24);
+
+    @media (max-width: em(360)) {
+      width: 100%;
+    }
 
     &_send {
       @include adaptiveValue("width", 383, 260);
@@ -255,6 +286,10 @@
 
     .quiz-form__fieldset_first & {
       margin-top: rem(84);
+
+      @media (max-width: em(580)) {
+        margin-top: rem(30);
+      }
     }
 
     .quiz-form__fieldset_price & {
