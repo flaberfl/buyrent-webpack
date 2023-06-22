@@ -37,6 +37,12 @@
   border: rem(3) solid $btnColor;
 }
 
+.wpcf7-radio.step1-1 {
+  @media (max-width:$tablet) {
+    grid-column-start: 2;
+  }
+}
+
 .wpcf7-radio.step5 input[type=radio]:checked+span {
   border: rem(1) solid $btnColor;
 }
@@ -94,7 +100,7 @@
       z-index: 100;
     }
 
-    @media (max-width:$tablet){
+    @media (max-width:$tablet) {
       grid-template-columns: 1fr;
     }
   }
@@ -105,7 +111,7 @@
     @include adaptiveValue("padding-bottom", 42, 30);
     padding-right: rem(48);
     @include adaptiveValue("padding-right", 48, 20, 1230, 991, 1);
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -162,6 +168,10 @@
       grid-template-columns: 1fr 1fr;
       gap: rem(40);
       @include adaptiveValue("gap", 40, 0);
+
+      @media (max-width:$tablet) {
+        grid-template-columns: 1fr auto auto 1fr;
+      }
     }
 
     &_number-items {
@@ -232,6 +242,10 @@
     margin-top: rem(81);
     // margin-top: rem(14);
     gap: rem(15);
+
+    @media (max-width:$tablet) {
+      justify-content: center;
+    }
 
     .quiz-form__fieldset_first & {
       margin-top: rem(84);
