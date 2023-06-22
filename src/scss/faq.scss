@@ -58,6 +58,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: rem(15);
 
       font-family: Futura PT;
       @include adaptiveValue("font-size", 24, 18);
@@ -69,6 +70,29 @@
       &:not(:last-child) {
         margin-bottom: rem(20);
       }
+
+
+      @media (min-width:$mobile) {
+
+        &:nth-child(2) {
+          span {
+            transform: rotate(-45deg);
+          }
+        }
+
+        &:nth-child(3) {
+          span {
+            transform: rotate(-80deg);
+          }
+        }
+
+        &:nth-child(4) {
+          span {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+
 
       p {
         max-width: rem(430);
@@ -88,6 +112,10 @@
         transition: all 0.3s ease 0s;
 
         border-radius: 50%;
+
+        @media (max-width:$mobile) {
+          transform: rotate(45deg);
+        }
       }
 
       &._tab-active {
