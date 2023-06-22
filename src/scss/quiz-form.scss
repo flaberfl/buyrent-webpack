@@ -192,7 +192,7 @@
   &__body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: rem(44);
+    @include adaptiveValue("gap", 44, 12);
 
 
     &_2items {
@@ -207,6 +207,12 @@
       @media (max-width: em(580)) {
         grid-template-columns: auto;
         justify-content: center;
+      }
+    }
+
+    &_3items {
+      @media (max-width: em(580)) {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
