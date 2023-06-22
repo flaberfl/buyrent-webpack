@@ -38,7 +38,7 @@
 }
 
 .wpcf7-radio.step1-1 {
-  @media (max-width:$tablet) {
+  @media (min-width:em(580)) and (max-width:$tablet) {
     grid-column-start: 2;
   }
 }
@@ -164,6 +164,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: rem(44);
 
+
     &_2items {
       grid-template-columns: 1fr 1fr;
       gap: rem(40);
@@ -171,6 +172,11 @@
 
       @media (max-width:$tablet) {
         grid-template-columns: 1fr auto auto 1fr;
+      }
+
+      @media (max-width: em(579)) {
+        grid-template-columns: auto;
+        justify-content: center;
       }
     }
 
