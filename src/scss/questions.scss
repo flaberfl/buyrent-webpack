@@ -6,7 +6,7 @@
   /* .questions__container */
   &__container {
     position: relative;
-    @include adaptiveValue("padding-top", 65, 30);
+    @include adaptiveValue("padding-top", 65, 60);
     padding-bottom: rem(95);
     background-color: $darkColor;
 
@@ -133,6 +133,8 @@
 
     /* .questions__label_whatsapp */
     &_whatsapp {
+      padding-bottom: rem(4);
+
       line-height: math.div(18, 15);
     }
   }

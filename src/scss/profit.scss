@@ -1,6 +1,6 @@
 .profit {
   @include adaptiveValue("padding-top", 130, 60);
-  @include adaptiveValue("padding-bottom", 150, 50);
+  @include adaptiveValue("padding-bottom", 150, 97);
 
   background: linear-gradient(180deg, #1F222C 23.17%, rgba(31, 34, 44, 0) 100%), linear-gradient(0deg, rgba(2, 11, 24, 0.78), rgba(2, 11, 24, 0.78)), url('@img/profit/bgProfit.jpg') center / cover no-repeat;
 

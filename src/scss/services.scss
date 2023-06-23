@@ -13,6 +13,7 @@
 
     @media (max-width:$mobile) {
       grid-template-columns: 1fr;
+      margin-bottom: rem(73);
     }
   }
 
@@ -130,7 +131,7 @@
       gap: rem(9);
       left: 50%;
       transform: translate(-50%, 0);
-      @include adaptiveValue("top", 118, 94, 768, 320, 1);
+      @include adaptiveValue("top", 160, 112, 768, 320, 1);
     }
   }
 

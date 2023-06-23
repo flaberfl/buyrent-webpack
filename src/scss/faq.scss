@@ -1,5 +1,5 @@
 .faq {
-  @include adaptiveValue("padding-top", 70, 40);
+  @include adaptiveValue("padding-top", 70, 60);
   @include adaptiveValue("padding-bottom", 406, 344);
 
   z-index: 10;
