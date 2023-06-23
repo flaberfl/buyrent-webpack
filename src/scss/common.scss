@@ -180,6 +180,7 @@ h2 {
 [btn-anim-to_right-blue] {
   position: relative;
   overflow: hidden;
+  border: 0;
 
   &::after {
     content: '';
@@ -284,10 +285,12 @@ h2 {
 
 @keyframes btnAnimBlue {
   0% {
+
     transform: translateX(-101%)
   }
 
   50% {
+
     transform: translateX(0);
 
   }
