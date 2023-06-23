@@ -135,6 +135,48 @@ h2 {
 
 }
 
+[btn-anim-to_right-trans] {
+  position: relative;
+  border: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    display: block;
+
+    background-color: $btnColor;
+    transition: all 2s ease 0s;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+
+    border: 1px solid $btnColor;
+    transition: width 1.5s ease 0s;
+  }
+
+  &._watcher-view {
+    &::before {
+      animation: btnAnim 2s cubic-bezier(.77, 0, .175, 1) forwards;
+    }
+
+    &::after {
+      // width: 100%;
+      animation: btnAnimBorder 2s cubic-bezier(.77, 0, .175, 1) forwards;
+    }
+  }
+}
+
 @keyframes toRight {
   0% {
     transform: translateX(-101%)
@@ -173,12 +215,45 @@ h2 {
 
 @keyframes backgroundZoom {
   from {
-    -webkit-transform: scale(1);
     transform: scale(1)
   }
 
   to {
-    -webkit-transform: scale(1.3);
     transform: scale(1.3)
+  }
+}
+
+
+@keyframes btnAnim {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  50% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes btnAnimBorder {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  50% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
   }
 }
