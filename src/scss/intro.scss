@@ -16,7 +16,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    
+
     z-index: -1;
 
     animation: 28s infinite alternate backgroundZoom;
@@ -73,7 +73,11 @@
     border-radius: 100%;
     border: rem(1) solid $borderColor;
 
-    &:hover {}
+    transition: transform 0.3s ease 0s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     @media (max-width:em(768)) {
       margin: rem(50) auto 0;
