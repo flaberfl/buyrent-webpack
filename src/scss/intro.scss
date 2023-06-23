@@ -36,6 +36,12 @@
   /* .intro__title */
   &__title {
     margin-bottom: rem(6);
+
+    span {
+      display: block;
+
+      animation: 5s infinite alternate zoom;
+    }
   }
 
   /* .intro__slogan */
