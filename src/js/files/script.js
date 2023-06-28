@@ -71,22 +71,26 @@ quizItems.forEach((quizItem, quizItemIndex) => {
 
 
     if (buyTarget === 'Для инвестиций с доходностью 8%') {
-
       btnsNext.forEach((btn) => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
-
+          quizItems[2].classList.add('_active');
+          quizItem.classList.remove('_active');
+        });
+      });
+    }
+    if (buyTarget === 'comfort') {
+      btnsNext.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
           quizItems[1].classList.add('_active');
           quizItem.classList.remove('_active');
-  
         });
       });
 
     }
-    else {
-      quizItems[2].classList.add('_active');
-      quizItem.classList.remove('_active');
-    }
+
+
 
     // let quizItemIndex = 2;
     // console.log(quizItemIndex);
