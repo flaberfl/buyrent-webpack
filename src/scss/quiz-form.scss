@@ -522,12 +522,24 @@
       background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-4/01.jpg') center / cover no-repeat;
     }
 
+    .step4-1a & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-4/01a.jpg') center / cover no-repeat;
+    }
+
     .step4-2 & {
       background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-4/02.jpg') center / cover no-repeat;
     }
 
+    .step4-2a & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-4/02a.jpg') center / cover no-repeat;
+    }
+
     .step4-3 & {
       background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-4/03.jpg') center / cover no-repeat;
+    }
+
+    .step4-3a & {
+      background: linear-gradient(180deg, rgba(21, 24, 32, 0.23) 38.86%, rgba(21, 24, 32, 0.86) 100%), url('@img/quiz/step-4/03a.jpg') center / cover no-repeat;
     }
   }
 
