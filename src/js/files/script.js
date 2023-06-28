@@ -72,8 +72,15 @@ quizItems.forEach((quizItem, quizItemIndex) => {
 
     if (buyTarget === 'Для инвестиций с доходностью 8%') {
 
-      quizItems[1].classList.add('_active');
-      quizItem.classList.remove('_active');
+      btnsNext.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          quizItems[1].classList.add('_active');
+          quizItem.classList.remove('_active');
+  
+        });
+      });
 
     }
     else {
