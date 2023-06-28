@@ -47,30 +47,38 @@ const quiz = document.getElementById('quiz-form');
 const quizItems = quiz.querySelectorAll('.quiz-form__fieldset');
 const btnsNext = quiz.querySelectorAll('.button_next');
 
-quizItems.forEach((quizItem, quizeItemIndex) => {
-  if (quizeItemIndex === 0) {
-    quizItem.classList.add('_active');
-  } else {
-    quizItem.classList.remove('_active');
-  }
-});
-
-btnsNext.forEach((btn, btnIndex) => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    quizItems[btnIndex].classList.remove('_active');
-    quizItems[btnIndex + 1].classList.add('_active');
-  });
-
-  btn.disabled = true;
-
-});
-
 quizItems.forEach((quizItem, quizItemIndex) => {
+  // if (quizItemIndex === 0) {
+  //   quizItem.classList.add('_active');
+  // } else {
+  //   quizItem.classList.remove('_active');
+  // }
+
+  quizItems[0].classList.add('_active');
 
   quizItem.addEventListener('change', (e) => {
     const target = e.target;
     const inputsChecked = quizItem.querySelectorAll('input:checked');
+
+    // console.log(inputsChecked);
+
+    const buyTarget = document.querySelector('input:checked').value;
+    console.log(buyTarget);
+
+
+    if (buyTarget === 'comfort') {
+      console.log('Угадал!');
+      console.log(quizItems[1]);
+      quizItems[1].classList.add('_active');
+      quizItem.classList.remove('_active');
+    }
+    else {
+      // quizItem.classList.remove('_active');
+    }
+
+    // let quizItemIndex = 2;
+    // console.log(quizItemIndex);
+
 
     if (inputsChecked.length > 0) {
       // разблокировать кнопку именно эту
@@ -81,3 +89,19 @@ quizItems.forEach((quizItem, quizItemIndex) => {
     }
   })
 });
+
+btnsNext.forEach((btn, btnIndex) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    // quizItems[btnIndex].classList.remove('_active');
+    // quizItems[btnIndex + 1].classList.add('_active');
+  });
+
+  btn.disabled = true;
+
+});
+
+// quizItems.forEach((quizItem, quizItemIndex) => {
+
+
+// });
