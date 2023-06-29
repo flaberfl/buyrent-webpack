@@ -54,10 +54,13 @@ quizItems.forEach((quizItem, quizItemIndex) => {
     quizItem.classList.remove('_active');
   }
 
-  quizItems[0].classList.add('_active');
+  // quizItems[0].classList.add('_active');
   // quizItem.addEventListener('change', (e) => {
 
   // })
+
+  // quizItem.classList.remove('_active');
+
 
   quizItem.addEventListener('change', (e) => {
     const target = e.target;
@@ -68,29 +71,6 @@ quizItems.forEach((quizItem, quizItemIndex) => {
     const buyTarget = document.querySelector('input:checked').value;
     console.log(buyTarget);
 
-
-    if (buyTarget === 'Для инвестиций с доходностью 8%') {
-      btnsNext.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          console.log(quizItems);
-          quizItems[2].classList.add('_active');
-          // quizItems[3].classList.remove('_active');
-          // quizItems[quizItem + 1].classList.remove('_active');
-        });
-      });
-    };
-
-    if (buyTarget === 'comfort') {
-      btnsNext.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          quizItems[1].classList.add('_active');
-          quizItem.classList.remove('_active');
-        });
-      });
-    };
-
     if (buyTarget === 'Новостройка' || 'Вторичное жильё' || 'Апартаменты в управление') {
       btnsNext.forEach((btn) => {
         btn.addEventListener('click', (e) => {
@@ -99,18 +79,41 @@ quizItems.forEach((quizItem, quizItemIndex) => {
           quizItem.classList.remove('_active');
         });
       });
-    };
+    }
 
-    if (buyTarget === 'Таунхаус/Вилла') {
+    if (buyTarget === 'Для инвестиций с доходностью 8%') {
       btnsNext.forEach((btn) => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
-          quizItems[4].classList.add('_active');
+          console.log(quizItems);
+          // quizItems[3].classList.remove('_active');
+          quizItems[2].classList.add('_active');
           quizItem.classList.remove('_active');
         });
       });
     };
 
+    if (buyTarget === 'comfort') {
+      btnsNext.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          quizItems[3].classList.remove('_active');
+          e.preventDefault();
+          quizItems[1].classList.add('_active');
+          quizItem.classList.remove('_active');
+        });
+      });
+    };
+
+
+    if (buyTarget === 'Таунхаус/Вилла') {
+      btnsNext.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          quizItems[5].classList.add('_active');
+          quizItem.classList.remove('_active');
+        });
+      });
+    };
 
 
 
