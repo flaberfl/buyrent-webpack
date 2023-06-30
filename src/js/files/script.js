@@ -297,3 +297,73 @@ quizItems.forEach((quizItem, quizItemIndex) => {
 
   })
 });
+
+const objects = document.querySelector('.object-popup__media');
+
+const objectItems = objects.querySelectorAll('.object-popup__image');
+const btnImageNext = objects.querySelectorAll('.button-media-next');
+const btnImagePrev = objects.querySelectorAll('.button-media-prev');
+
+
+let countImage = 0;
+objectItems[countImage].classList.add('_active');
+
+console.log(objectItems);
+btnImageNext.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    countImage++;
+    initObjectMedia();
+
+    console.log(countImage);
+  });
+});
+
+btnImagePrev.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    countImage--;
+    initObjectMedia();
+  });
+});
+
+function initObjectMedia() {
+  objectItems.forEach((element, i) => {
+    element.classList.remove('_active')
+    if (i === countImage) {
+      element.classList.add('_active')
+
+      return;
+    }
+  })
+}
+
+
+
+
+// objectItems.forEach((objectItem, objectItemIndex) => {
+//   if (objectItemIndex === 0) {
+//     objectItem.classList.add('_active');
+//   } else {
+//     objectItem.classList.remove('_active');
+//   }
+// });
+
+// btnImageNext.forEach((btn, btnIndex) => {
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     quizeItems[btnIndex].classList.remove('_active');
+//     quizeItems[btnIndex + 1].classList.add('_active');
+//   });
+
+// });
+
+// btnsPrev.forEach((btn, btnIndex) => {
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     quizeItems[btnIndex].classList.remove('_active');
+//     quizeItems[btnIndex].classList.add('_active');
+//   });
+
+// });
+

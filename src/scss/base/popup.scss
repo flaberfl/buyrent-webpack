@@ -169,11 +169,7 @@ body::after {
 
 	&__image {
 
-		// height: 100%;
-		// padding-bottom: 48%;
-		img {
-			max-width: 100%;
-			object-fit: cover;
-		}
+		padding-bottom: 48%;
+
 	}
 }
