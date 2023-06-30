@@ -319,9 +319,13 @@ btnImageNext.forEach((btn) => {
     e.preventDefault();
     countImage++;
     initObjectMedia();
+    console.log(objectItems.length);
+
     if (countImage >= objectItems.length) {
       console.log('!!!!');
-      btnImageNext.disabled = true;
+      btn.disabled = true;
+    } else {
+      btn.disabled = false;
     }
     console.log(countImage);
   });
@@ -347,11 +351,6 @@ function initObjectMedia() {
       console.log('Куда погнал?');
     }
   })
-}
-
-
-function lenghtMedia() {
-
 }
 
 
