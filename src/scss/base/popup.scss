@@ -163,6 +163,17 @@ body::after {
 	}
 
 	&__body {
-		
+		padding-top: rem(10);
+		padding: rem(10) rem(30) rem(15);
+	}
+
+	&__image {
+
+		// height: 100%;
+		// padding-bottom: 48%;
+		img {
+			max-width: 100%;
+			object-fit: cover;
+		}
 	}
 }
