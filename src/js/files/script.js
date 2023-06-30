@@ -305,16 +305,24 @@ const btnImageNext = objects.querySelectorAll('.button-media-next');
 const btnImagePrev = objects.querySelectorAll('.button-media-prev');
 
 
+
 let countImage = 0;
 objectItems[countImage].classList.add('_active');
 
+
+
 console.log(objectItems);
+console.log(objectItems.length);
+
 btnImageNext.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     countImage++;
     initObjectMedia();
-
+    if (countImage >= objectItems.length) {
+      console.log('!!!!');
+      btnImageNext.disabled = true;
+    }
     console.log(countImage);
   });
 });
@@ -332,10 +340,18 @@ function initObjectMedia() {
     element.classList.remove('_active')
     if (i === countImage) {
       element.classList.add('_active')
+    }
 
-      return;
+    if (i >= objectItems.length) {
+      btnImageNext.disabled = true;
+      console.log('Куда погнал?');
     }
   })
+}
+
+
+function lenghtMedia() {
+
 }
 
 
