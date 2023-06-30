@@ -156,3 +156,13 @@ body::after {
 
 	background-color: $darkColor;
 }
+
+.object-popup {
+	&__content {
+		max-width: rem(1020);
+	}
+
+	&__body {
+		
+	}
+}

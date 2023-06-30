@@ -208,16 +208,18 @@ quizItems.forEach((quizItem, quizItemIndex) => {
 
     // const buyTarget = document.querySelector('input:checked').value;
 
-    inputsChecked.forEach((i) => {
+    inputsChecked.forEach((i) => { // Это я перебираю все радио инпуты
       console.log(i.value);
 
-      btnsNext.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
+      btnsNext.forEach((btn) => {    // Перебираю все кнопки Далее
+        btn.addEventListener('click', (e) => {   // Отлавливаю событие по кнопке
           e.preventDefault();
 
           if (i.value === 'Для инвестиций с доходностью 8%') {
-            quizItem.classList.remove('_active');
             quizItems[2].classList.add('_active');
+            quizItem.classList.remove('_active');
+
+            console.log('Удаляем предыдущий слайд');
             console.log('Переходим на 2a слайд');
           }
 
@@ -225,6 +227,8 @@ quizItems.forEach((quizItem, quizItemIndex) => {
             if (i.value === 'comfort') {
               quizItems[1].classList.add('_active');
               quizItem.classList.remove('_active');
+              console.log('Удаляем предыдущий слайд');
+
               console.log('Переходим на 2 слайд');
             } else
 
