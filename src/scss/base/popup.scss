@@ -188,13 +188,19 @@ body::after {
 	/* .object-popup__media */
 	&__media {
 		position: relative;
+		margin-bottom: rem(19);
 	}
 
 	/* .object-popup__building-block */
-	&__building-block {}
+	&__building-block {
+		display: grid;
+		grid-template-columns: 1fr 53%;
+	}
 
 	/* .object-popup__descr */
-	&__descr {}
+	&__descr {
+		@include adaptiveValue("padding-right", 22, 0, 1020, 767, 2);
+	}
 
 	/* .object-popup__title */
 	&__title {}
@@ -222,7 +228,11 @@ body::after {
 	&__installment {}
 
 	/* .object-popup__subtitle */
-	&__subtitle {}
+	&__subtitle {
+		font-size: rem(16);
+		font-weight: 600;
+		line-height: math.div(26, 16);
+	}
 
 	/* .object-popup__complex */
 	&__complex {}
