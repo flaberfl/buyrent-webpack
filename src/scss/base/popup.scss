@@ -164,12 +164,17 @@ body::after {
 
 	&__body {
 		padding-top: rem(10);
-		padding: rem(10) rem(30) rem(15);
+		padding-bottom: rem(15);
+		@include adaptiveValue("padding-right", 30, 0);
+		@include adaptiveValue("padding-left", 30, 0);
 	}
 
-	&__image {
-
+	&__image-ibg {
 		padding-bottom: 48%;
+		display: none;
 
+		&._active {
+			display: block;
+		}
 	}
 }

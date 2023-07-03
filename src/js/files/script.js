@@ -300,7 +300,7 @@ quizItems.forEach((quizItem, quizItemIndex) => {
 
 const objects = document.querySelector('.object-popup__media');
 
-const objectItems = objects.querySelectorAll('.object-popup__image');
+const objectItems = objects.querySelectorAll('.object-popup__image-ibg');
 const btnImageNext = objects.querySelectorAll('.button-media-next');
 const btnImagePrev = objects.querySelectorAll('.button-media-prev');
 
@@ -308,7 +308,6 @@ const btnImagePrev = objects.querySelectorAll('.button-media-prev');
 
 let countImage = 0;
 objectItems[countImage].classList.add('_active');
-
 
 
 console.log(objectItems);
