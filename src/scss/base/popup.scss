@@ -275,6 +275,8 @@ body::after {
 
 	/* .build-features__specifications */
 	&__specifications {
+		margin-bottom: rem(27) !important;
+
 		@media (max-width:$mobile) {
 			display: flex !important;
 			justify-content: center !important;
@@ -335,6 +337,12 @@ body::after {
 		border: rem(1) solid rgba(236, 240, 241, 0.09);
 
 		font-family: Futura PT;
+
+		@media (max-width:$mobileSmall) {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(4, 1fr);
+			padding: rem(13) rem(20);
+		}
 	}
 
 	/* .build-features__block */
@@ -344,17 +352,25 @@ body::after {
 		gap: rem(2);
 
 		&:nth-child(odd) {
-			// @include adaptiveValue("padding-right", 95, 20);
-
-			border-right: 1px dashed rgba(255, 255, 255, 0.07) !important;
+			@media (min-width:$mobileSmall) {
+				border-right: 1px dashed rgba(255, 255, 255, 0.07) !important;
+			}
 		}
 
 		&:nth-child(even) {
-			@include adaptiveValue("padding-left", 48, 20);
+
+			@media (min-width:$mobileSmall) {
+				@include adaptiveValue("padding-left", 48, 20);
+			}
 		}
 
+		@media (max-width:$mobileSmall) {
+			padding-bottom: rem(14);
 
-
+			&:not(:last-child) {
+				border-bottom: 1px dashed rgba(255, 255, 255, 0.07) !important;
+			}
+		}
 	}
 
 	&__name {
