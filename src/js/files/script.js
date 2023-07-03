@@ -305,12 +305,9 @@ const btnImageNext = objects.querySelectorAll('.button-media-next');
 const btnImagePrev = objects.querySelectorAll('.button-media-prev');
 
 
-
 let countImage = 0;
 objectItems[countImage].classList.add('_active');
 
-
-console.log(objectItems);
 console.log(objectItems.length);
 
 btnImageNext.forEach((btn) => {
@@ -318,14 +315,11 @@ btnImageNext.forEach((btn) => {
     e.preventDefault();
     countImage++;
     initObjectMedia();
-    console.log(objectItems.length);
-
     if (countImage >= objectItems.length) {
-      console.log('!!!!');
-      btn.disabled = true;
-    } else {
-      btn.disabled = false;
+      countImage = 0;
+      objectItems[countImage].classList.add('_active');
     }
+
     console.log(countImage);
   });
 });
@@ -334,7 +328,15 @@ btnImagePrev.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     countImage--;
+    console.log(countImage);
+    console.log(objectItems.length);
+
     initObjectMedia();
+    if (countImage <= 0) {
+      countImage = objectItems.length;
+      objectItems[countImage].classList.add('_active');
+    }
+
   });
 });
 
@@ -344,11 +346,9 @@ function initObjectMedia() {
     if (i === countImage) {
       element.classList.add('_active')
     }
-
-    if (i >= objectItems.length) {
-      btnImageNext.disabled = true;
-      console.log('Куда погнал?');
-    }
+    // if (countImage >= objectItems.length) {
+    //   countImage = 0;
+    // }
   })
 }
 
