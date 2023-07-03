@@ -272,6 +272,11 @@ body::after {
 			column-gap: rem(80);
 			@include adaptiveValue("column-gap", 80, 26);
 		}
+
+		@media (max-width:$mobileSmall){
+			  margin-right: rem(-25);
+			  margin-left: rem(-25);
+		}
 	}
 
 	&__button {
@@ -310,7 +315,7 @@ body::after {
 		}
 
 		@media (max-width: em(600)) {
-			// width: 100%;
+			margin-top: rem(26);
 		}
 	}
 
@@ -328,8 +333,7 @@ body::after {
 		}
 
 		@media (max-width: em(600)) {
-			width: 100%;
-	
+			flax-basis: 100%;
 		}
 	}
 }
