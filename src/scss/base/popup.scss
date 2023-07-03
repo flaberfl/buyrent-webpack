@@ -250,41 +250,87 @@ body::after {
 	&__complex {}
 
 	/* .object-popup__apartments */
-	&__apartments {}
+	&__apartments {
+		margin-bottom: rem(30);
+	}
 
 	/* .object-popup__contacts */
 	&__contacts {
-		// display: grid;
-		// grid-template-columns: repeat(3, 1fr);
 		display: flex;
-		justify-content: center;
-		// align-items: flex-start;
+		justify-content: space-between;
+		flex-wrap: wrap;
 
 		padding: rem(24) 0;
 
+		@include adaptiveValue("padding-right", 80, 20);
+		@include adaptiveValue("padding-left", 80, 20);
+
 		background-color: #1C1E28;
+
+		@media (max-width:$tablet) {
+			justify-content: center;
+			column-gap: rem(80);
+			@include adaptiveValue("column-gap", 80, 26);
+		}
 	}
 
 	&__button {
-		width: rem(240);
-		margin-right: rem(40);
+
+		button {
+			width: rem(240);
+		}
+
+		@media (max-width:$tablet) {
+			flex-basis: 100%;
+			margin-bottom: rem(17);
+
+			text-align: center;
+		}
 	}
 
 	&__whatsapp {
 		display: flex;
 		flex-direction: column;
 		padding-bottom: 0 !important;
+		justify-items: start;
 		align-self: flex-end;
 		gap: rem(6);
 
-		&::before{
+		.questions__whatsapp {
+			margin-left: rem(0);
+			align-self: flex-start;
+
+			@media (max-width: em(600)) {
+				align-self: center;
+			}
+		}
+
+		&::before {
 			margin-top: rem(6);
-			
+		}
+
+		@media (max-width: em(600)) {
+			// width: 100%;
 		}
 	}
 
 	&__tel {
-		margin-right: rem(60);
+		display: flex;
+		flex-direction: column;
+		gap: 0 !important;
+		align-self: start;
+		// margin-right: rem(60);
+		// @include adaptiveValue("margin-right", 60, 10);
+		// max-width: rem(300);
+
+		&.questions__tel {
+			margin-bottom: 0;
+		}
+
+		@media (max-width: em(600)) {
+			width: 100%;
+	
+		}
 	}
 }
 
