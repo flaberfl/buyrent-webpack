@@ -158,10 +158,16 @@ body::after {
 }
 
 .object-popup {
+
+	/* .object-popup__content */
 	&__content {
 		max-width: rem(1020);
 	}
 
+	/* .object-popup__wrapper */
+	&__wrapper {}
+
+	/* .object-popup__body */
 	&__body {
 		padding-top: rem(10);
 		padding-bottom: rem(15);
@@ -169,6 +175,7 @@ body::after {
 		@include adaptiveValue("padding-left", 30, 0);
 	}
 
+	/* .object-popup__image-ibg */
 	&__image-ibg {
 		padding-bottom: 48%;
 		display: none;
@@ -177,4 +184,137 @@ body::after {
 			display: block;
 		}
 	}
+
+	/* .object-popup__media */
+	&__media {
+		position: relative;
+	}
+
+	/* .object-popup__building-block */
+	&__building-block {}
+
+	/* .object-popup__descr */
+	&__descr {}
+
+	/* .object-popup__title */
+	&__title {}
+
+	/* .object-popup__text */
+	&__text {
+		@include adaptiveValue("font-size", 15, 12);
+		line-height: 1.7333333333;
+		font-weight: 300;
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+			}
+		}
+	}
+
+	/* .object-popup__build-features */
+	&__build-features {}
+
+	/* .object-popup__subtutle */
+	&__subtutle {}
+
+	/* .object-popup__installment */
+	&__installment {}
+
+	/* .object-popup__subtitle */
+	&__subtitle {}
+
+	/* .object-popup__complex */
+	&__complex {}
+
+	/* .object-popup__apartments */
+	&__apartments {}
+
+	/* .object-popup__contacts */
+	&__contacts {}
+}
+
+
+
+.button-media-prev,
+.button-media-next {
+	position: absolute;
+	bottom: 0;
+
+	color: #000;
+}
+
+.button-media-prev {
+	left: 0;
+}
+
+.button-media-next {
+	right: 0;
+}
+
+.build-features {
+
+	/* .build-features__finish */
+	&__finish {}
+
+	/* .build-features__title */
+	&__title {}
+
+	/* .build-features__specifications */
+	&__specifications {}
+
+	/* .build-features__item */
+	&__item {}
+
+	/* .build-features__label */
+	&__label {}
+
+	/* .build-features__value */
+	&__value {}
+
+	/* .build-features__descr */
+	&__descr {}
+
+	/* .build-features__block */
+	&__block {}
+
+	/* .build-features__num-floors-title */
+	&__num-floors-title {}
+
+	/* .build-features__num-floors */
+	&__num-floors {}
+
+	/* .build-features__num-flat-title */
+	&__num-flat-title {}
+
+	/* .build-features__num-flat */
+	&__num-flat {}
+
+	/* .build-features__area-flat-title */
+	&__area-flat-title {}
+
+	/* .build-features__area-flat */
+	&__area-flat {}
+
+	/* .build-features__area-price-title */
+	&__area-price-title {}
+
+	/* .build-features__area-price */
+	&__area-price {}
+}
+
+.complex-object {
+
+	/* .complex-object__body */
+	&__body {}
+
+	/* .complex-object__list */
+	&__list {
+		@include adaptiveValue("font-size", 15, 12);
+		line-height: 1.7333333333;
+		font-weight: 300;
+	}
+
+	/* .complex-object__item */
+	&__item {}
 }
