@@ -197,14 +197,14 @@ body::after {
 		grid-template-columns: 1fr 53%;
 		row-gap: rem(20);
 
-		@media (max-width:$mobile){
-			 grid-template-columns: 1fr; 
+		@media (max-width:$mobile) {
+			grid-template-columns: 1fr;
 		}
 	}
 
 	/* .object-popup__descr */
 	&__descr {
-		@include adaptiveValue("padding-right", 22, 0, 1020, 767, 2);
+		@include adaptiveValue("padding-right", 22, 10, 1020, 767, 2);
 	}
 
 	/* .object-popup__title */
@@ -265,7 +265,6 @@ body::after {
 
 .build-features {
 
-
 	/* .build-features__finish */
 	&__finish {}
 
@@ -275,19 +274,54 @@ body::after {
 	}
 
 	/* .build-features__specifications */
-	&__specifications {}
+	&__specifications {
+		@media (max-width:$mobile) {
+			display: flex !important;
+			justify-content: center !important;
+			flex-wrap: wrap;
+		}
+
+		@media (max-width:$mobileSmall) {
+			justify-content: space-between !important;
+			width: 100%;
+			padding: 0 !important;
+			padding-right: rem(30) !important;
+			padding-left: rem(30) !important;
+		}
+	}
 
 	/* .build-features__item */
 	&__item {
 		padding-left: rem(22) !important;
 		// padding-right: 0 !important;
+
+		@media (max-width:$mobileSmall) {
+			grid-template-columns: repeat(2, 1fr);
+			padding-right: 0 !important;
+			padding-left: 0 !important;
+			padding-top: rem(11);
+			padding-bottom: rem(11);
+			width: 100%;
+
+			border: none !important;
+
+			&:nth-child(2) {
+				border-top: 1px dashed rgba(255, 255, 255, 0.07) !important;
+				border-bottom: 1px dashed rgba(255, 255, 255, 0.07) !important;
+			}
+		}
+
 	}
 
 	/* .build-features__label */
-	&__label {}
+	&__label {
+		font-size: rem(15) !important;
+	}
 
 	/* .build-features__value */
-	&__value {}
+	&__value {
+		justify-self: end;
+	}
 
 	/* .build-features__descr */
 	&__descr {}
