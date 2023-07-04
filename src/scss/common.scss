@@ -87,6 +87,13 @@ h2 {
   }
 }
 
+.mobile-logo {
+  @include adaptiveValue("width", 400, 182);
+
+  @media (min-width:$mobile) {
+    display: none;
+  }
+}
 
 [anim-left-right] {
   position: relative;
@@ -193,7 +200,6 @@ h2 {
     display: block;
 
     background-color: $hoverColor;
-    // transition: all 2s ease 0s;
   }
 
   &._watcher-view {
@@ -250,15 +256,15 @@ h2 {
   }
 }
 
-@keyframes zoom {
-  from {
-    transform: scale(1)
-  }
+// @keyframes zoom {
+//   from {
+//     transform: scale(1)
+//   }
 
-  to {
-    transform: scale(1.2)
-  }
-}
+//   to {
+//     transform: scale(1.2)
+//   }
+// }
 
 
 // @keyframes btnAnim {
@@ -326,3 +332,86 @@ h2 {
     opacity: 1;
   }
 }
+
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+
+
+@keyframes shring-animation {
+  0% {
+    background-position: 0 0;
+    opacity: 0;
+    width: 0;
+  }
+
+  1% {
+    background-position: 0 0;
+    opacity: 1;
+    border-right: 1px solid orange;
+  }
+
+  50% {
+    background-position: 150px 0;
+    opacity: 1;
+    border-right: 1px solid orange;
+  }
+
+  100% {
+    background-position: 400px 0;
+    opacity: 1;
+    border-right: 1px solid orange;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+
+  1%,
+  99% {
+    border-right: 1px solid orange;
+  }
+
+  100% {
+    border-right: none;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+// @keyframes animated-cursor {
+// //   from {
+// //     border-right-color: rgba(0, 255, 0, .75);
+// //   }
+
+// //   to {
+// //     border-right-color: transparent;
+// //   }
+// // }

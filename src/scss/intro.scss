@@ -40,7 +40,20 @@
     span {
       display: block;
 
-      animation: 5s infinite alternate zoom;
+      padding-top: rem(10);
+      overflow: hidden;
+      min-height: rem(100);
+      white-space: nowrap;
+
+      // animation: animated-text 6s steps(35, end) 1s 1 normal both,
+
+      &._watcher-view {
+        animation: animated-text 4s steps(50, end) 1s 1 normal both,
+      }
+
+      @media (max-width:$mobile){
+         display: none; 
+      }
     }
   }
 
