@@ -298,59 +298,95 @@ quizItems.forEach((quizItem, quizItemIndex) => {
   })
 });
 
-const objects = document.querySelector('.object-popup__media');
+// const objects = document.querySelector('.object-popup__media');
+// const objectItems = objects.querySelectorAll('.object-popup__image-ibg');
+const slideshow = document.querySelector('.object-popup__media');
+const img = slideshow.querySelectorAll('.object-popup__image-ibg');
+const btnImageNext = document.querySelectorAll('.button-media-next');
+const btnImagePrev = document.querySelectorAll('.button-media-prev');
 
-const objectItems = objects.querySelectorAll('.object-popup__image-ibg');
-const btnImageNext = objects.querySelectorAll('.button-media-next');
-const btnImagePrev = objects.querySelectorAll('.button-media-prev');
 
 
-let countImage = 0;
-objectItems[countImage].classList.add('_active');
+let currentIndex = 0;
 
-console.log(objectItems.length);
 
 btnImageNext.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
-    countImage++;
-    initObjectMedia();
-    if (countImage >= objectItems.length) {
-      countImage = 0;
-      objectItems[countImage].classList.add('_active');
+    currentIndex++;
+    if (currentIndex >= img.length) {
+      currentIndex = 0;
     }
-
-    console.log(countImage);
+    img[currentIndex].classList.add('_active');
+    img[(currentIndex - 1) % img.length].classList.remove('_active');
   });
 });
+
 
 btnImagePrev.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
-    countImage--;
-    console.log(countImage);
-    console.log(objectItems.length);
 
-    initObjectMedia();
-    if (countImage <= 0) {
-      countImage = objectItems.length;
-      objectItems[countImage].classList.add('_active');
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = img.length - 1;
     }
+    img[currentIndex].classList.add('_active');
+    img[(currentIndex + 1) % img.length].classList.remove('_active');
 
   });
 });
 
-function initObjectMedia() {
-  objectItems.forEach((element, i) => {
-    element.classList.remove('_active')
-    if (i === countImage) {
-      element.classList.add('_active')
-    }
-    // if (countImage >= objectItems.length) {
-    //   countImage = 0;
-    // }
-  })
-}
+{/* setInterval(nextSlide, 3000); // Переключение вперед каждые 3 секунды
+setInterval(prevSlide, 3000); // Переключение назад каждые 3 секунды */}
+
+
+// let countImage = 0;
+// objectItems[countImage].classList.add('_active');
+
+// console.log(objectItems.length);
+
+// btnImageNext.forEach((btn) => {
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     countImage++;
+//     initObjectMedia();
+//     if (countImage >= objectItems.length) {
+//       countImage = 0;
+//       objectItems[countImage].classList.add('_active');
+//     }
+
+//     console.log(countImage);
+//   });
+// });
+
+// btnImagePrev.forEach((btn) => {
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     countImage--;
+//     console.log(countImage);
+//     console.log(objectItems.length);
+
+//     initObjectMedia();
+//     if (countImage <= 0) {
+//       countImage = objectItems.length;
+//       objectItems[countImage].classList.add('_active');
+//     }
+
+//   });
+// });
+
+// function initObjectMedia() {
+//   objectItems.forEach((element, i) => {
+//     element.classList.remove('_active')
+//     if (i === countImage) {
+//       element.classList.add('_active')
+//     }
+//     // if (countImage >= objectItems.length) {
+//     //   countImage = 0;
+//     // }
+//   })
+// }
 
 
 
