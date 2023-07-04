@@ -164,9 +164,6 @@ body::after {
 		max-width: rem(1020);
 	}
 
-	/* .object-popup__wrapper */
-	&__wrapper {}
-
 	/* .object-popup__body */
 	&__body {
 		padding-top: rem(10);
@@ -208,8 +205,6 @@ body::after {
 		@include adaptiveValue("padding-right", 22, 10, 1020, 767, 2);
 	}
 
-	/* .object-popup__title */
-	&__title {}
 
 	/* .object-popup__text */
 	&__text {
@@ -226,7 +221,6 @@ body::after {
 
 	/* .object-popup__build-features */
 	&__build-features {}
-
 
 	/* .object-popup__installment */
 	&__installment {
@@ -280,7 +274,6 @@ body::after {
 	}
 
 	&__button {
-
 		button {
 			width: rem(240);
 		}
@@ -324,9 +317,6 @@ body::after {
 		flex-direction: column;
 		gap: 0 !important;
 		align-self: start;
-		// margin-right: rem(60);
-		// @include adaptiveValue("margin-right", 60, 10);
-		// max-width: rem(300);
 
 		&.questions__tel {
 			margin-bottom: 0;
@@ -336,14 +326,40 @@ body::after {
 			flax-basis: 100%;
 		}
 	}
+
+	&__btns {
+		display: flex;
+		gap: rem(10);
+		position: absolute;
+		right: rem(25);
+		bottom: rem(25);
+		@include adaptiveValue("right", 25, 15);
+		@include adaptiveValue("bottom", 25, 15);
+	}
 }
 
 .button-media-prev,
 .button-media-next {
-	position: absolute;
-	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-	color: #000;
+	@include adaptiveValue("width", 60, 40);
+	@include adaptiveValue("height", 60, 40);
+
+	border-radius: 50%;
+
+	background-color: #fff;
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+
+
 }
 
 .button-media-prev {
@@ -386,7 +402,6 @@ body::after {
 	/* .build-features__item */
 	&__item {
 		padding-left: rem(22) !important;
-		// padding-right: 0 !important;
 
 		@media (max-width:$mobileSmall) {
 			grid-template-columns: repeat(2, 1fr);
@@ -423,7 +438,6 @@ body::after {
 		grid-template-rows: repeat(2, 1fr);
 		padding: rem(13) 0 rem(13) rem(25);
 		@include adaptiveValue("row-gap", 32, 10);
-
 
 		border: rem(1) solid rgba(236, 240, 241, 0.09);
 
@@ -470,27 +484,6 @@ body::after {
 		color: #A7A9AA;
 	}
 
-	/* .build-features__num-floors-title */
-	&__num-floors-title {}
-
-	/* .build-features__num-floors */
-	&__num-floors {}
-
-	/* .build-features__num-flat-title */
-	&__num-flat-title {}
-
-	/* .build-features__num-flat */
-	&__num-flat {}
-
-	/* .build-features__area-flat-title */
-	&__area-flat-title {}
-
-	/* .build-features__area-flat */
-	&__area-flat {}
-
-	/* .build-features__area-price-title */
-	&__area-price-title {}
-
 	/* .build-features__area-price */
 	&__area-price {
 		color: #51CB5F;
@@ -498,7 +491,6 @@ body::after {
 }
 
 .complex-object {
-
 	@include adaptiveValue("margin-bottom", 30, 20);
 
 	/* .complex-object__body */
