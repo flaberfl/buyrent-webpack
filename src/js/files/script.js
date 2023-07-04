@@ -298,122 +298,49 @@ quizItems.forEach((quizItem, quizItemIndex) => {
   })
 });
 
-// const objects = document.querySelector('.object-popup__media');
-// const objectItems = objects.querySelectorAll('.object-popup__image-ibg');
-const slideshow = document.querySelector('.object-popup__media');
-const img = slideshow.querySelectorAll('.object-popup__image-ibg');
+const objects = document.querySelector('.object-popup__media');
+const objectItems = objects.querySelectorAll('.object-popup__image-ibg');
 const btnImageNext = document.querySelectorAll('.button-media-next');
 const btnImagePrev = document.querySelectorAll('.button-media-prev');
 
 
-
-let currentIndex = 0;
-
+let countImage = 0;
+objectItems[countImage].classList.add('_active');
 
 btnImageNext.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
-    currentIndex++;
-    if (currentIndex >= img.length) {
-      currentIndex = 0;
+    countImage++;
+    initObjectMedia();
+    if (countImage >= objectItems.length) {
+      countImage = 0;
+      objectItems[countImage].classList.add('_active');
     }
-    img[currentIndex].classList.add('_active');
-    img[(currentIndex - 1) % img.length].classList.remove('_active');
+
+    console.log(countImage);
   });
 });
-
 
 btnImagePrev.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
+    countImage--;
+    console.log(countImage);
+    console.log(objectItems.length);
 
-    currentIndex--;
-    if (currentIndex < 0) {
-      currentIndex = img.length - 1;
+    initObjectMedia();
+    if (countImage < 0) {
+      countImage = objectItems.length - 1;
+      objectItems[countImage].classList.add('_active');
     }
-    img[currentIndex].classList.add('_active');
-    img[(currentIndex + 1) % img.length].classList.remove('_active');
-
   });
 });
 
-{/* setInterval(nextSlide, 3000); // Переключение вперед каждые 3 секунды
-setInterval(prevSlide, 3000); // Переключение назад каждые 3 секунды */}
-
-
-// let countImage = 0;
-// objectItems[countImage].classList.add('_active');
-
-// console.log(objectItems.length);
-
-// btnImageNext.forEach((btn) => {
-//   btn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     countImage++;
-//     initObjectMedia();
-//     if (countImage >= objectItems.length) {
-//       countImage = 0;
-//       objectItems[countImage].classList.add('_active');
-//     }
-
-//     console.log(countImage);
-//   });
-// });
-
-// btnImagePrev.forEach((btn) => {
-//   btn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     countImage--;
-//     console.log(countImage);
-//     console.log(objectItems.length);
-
-//     initObjectMedia();
-//     if (countImage <= 0) {
-//       countImage = objectItems.length;
-//       objectItems[countImage].classList.add('_active');
-//     }
-
-//   });
-// });
-
-// function initObjectMedia() {
-//   objectItems.forEach((element, i) => {
-//     element.classList.remove('_active')
-//     if (i === countImage) {
-//       element.classList.add('_active')
-//     }
-//     // if (countImage >= objectItems.length) {
-//     //   countImage = 0;
-//     // }
-//   })
-// }
-
-
-
-
-// objectItems.forEach((objectItem, objectItemIndex) => {
-//   if (objectItemIndex === 0) {
-//     objectItem.classList.add('_active');
-//   } else {
-//     objectItem.classList.remove('_active');
-//   }
-// });
-
-// btnImageNext.forEach((btn, btnIndex) => {
-//   btn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     quizeItems[btnIndex].classList.remove('_active');
-//     quizeItems[btnIndex + 1].classList.add('_active');
-//   });
-
-// });
-
-// btnsPrev.forEach((btn, btnIndex) => {
-//   btn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     quizeItems[btnIndex].classList.remove('_active');
-//     quizeItems[btnIndex].classList.add('_active');
-//   });
-
-// });
-
+function initObjectMedia() {
+  objectItems.forEach((element, i) => {
+    element.classList.remove('_active')
+    if (i === countImage) {
+      element.classList.add('_active')
+    }
+  })
+}
