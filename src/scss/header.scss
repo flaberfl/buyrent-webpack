@@ -295,13 +295,13 @@
 			&::before {
 				transform: rotate(-45deg);
 				// top: calc(50% - rem(1));
-				top: rem(-5);
+				top: rem(10);
 			}
 
 			&::after {
 				transform: rotate(45deg);
 				bottom: calc(50% - rem(1));
-				top: rem(-5);
+				top: rem(10);
 				left: 50%;
 				width: 100%;
 			}
