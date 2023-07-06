@@ -71,7 +71,7 @@
     @include adaptiveValue("margin-right", 76, 0, 1440, 992, 2);
     @include adaptiveValue("margin-left", 20, 19, 1440, 767, 2);
 
-    align-self: start;
+    align-self: center;
 
     img {
       max-width: 100%;
