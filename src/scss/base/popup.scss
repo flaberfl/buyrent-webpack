@@ -31,6 +31,8 @@ body::after {
 .popup__close {
 	display: block;
 	margin-left: auto;
+	position: relative;
+	z-index: 900;
 }
 
 .popup_show {

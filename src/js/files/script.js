@@ -46,119 +46,9 @@ const quiz = document.getElementById('quiz-form');
 const quizItems = quiz.querySelectorAll('.quiz-form__fieldset');
 const btnsNext = quiz.querySelectorAll('.button_next');
 
-// quizItems.forEach((quizItem, quizItemIndex) => {
-//   if (quizItemIndex === 0) {
-//     quizItem.classList.add('_active');
-//   } else {
-//     quizItem.classList.remove('_active');
-//   }
 
-//   // quizItems[0].classList.add('_active');
-//   // quizItem.addEventListener('change', (e) => {
-
-//   // })
-
-//   quizItem.addEventListener('change', (e) => {
-//     const target = e.target;
-//     const inputsChecked = quizItem.querySelectorAll('input:checked');
-
-//     // console.log(inputsChecked);
-
-//     const buyTarget = document.querySelector('input:checked').value;
-
-//     console.log(buyTarget);
-
-
-//     if (buyTarget === 'Для инвестиций с доходностью 8%') {
-//       btnsNext.forEach((btn) => {
-//         btn.addEventListener('click', (e) => {
-//           e.preventDefault();
-
-//           quizItems[2].classList.add('_active');
-//           quizItem.classList.remove('_active');
-//           console.log(buyTarget);
-
-//         });
-//       });
-//     };
-
-//     if (buyTarget === 'comfort') {
-//       btnsNext.forEach((btn) => {
-//         btn.addEventListener('click', (e) => {
-//           e.preventDefault();
-//           quizItems[1].classList.add('_active');
-//           quizItem.classList.remove('_active');
-//           console.log(buyTarget);
-//         });
-//       });
-//     };
-
-
-//     // if (buyTarget === 'Новостройка' || 'Вторичное жильё' || 'Апартаменты в управление') {
-//     //   btnsNext.forEach((btn) => {
-//     //     btn.addEventListener('click', (e) => {
-//     //       e.preventDefault();
-//     //       quizItems[3].classList.add('_active');
-//     //       quizItem.classList.remove('_active');
-//     //       console.log(buyTarget);
-//     //     });
-//     //   });
-//     // }
-
-//     // if (buyTarget === 'Таунхаус/Вилла') {
-//     //   btnsNext.forEach((btn) => {
-//     //     btn.addEventListener('click', (e) => {
-//     //       e.preventDefault();
-//     //       quizItems[4].classList.add('_active');
-//     //       quizItem.classList.remove('_active');
-//     //       console.log(buyTarget);
-
-//     //     });
-//     //   });
-//     // };
-
-
-
-
-
-
-
-
-//     // let quizItemIndex = 2;
-//     // console.log(quizItemIndex);
-
-
-//     if (inputsChecked.length > 0) {
-//       // разблокировать кнопку именно эту
-//       btnsNext[quizItemIndex].disabled = false;
-//     } else {
-//       // заблокировать эту кнопку
-//       btnsNext[quizItemIndex].disabled = true;
-//     }
-//   })
-// });
-
-// btnsNext.forEach((btn, btnIndex) => {
-//   btn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     // quizItems[btnIndex].classList.remove('_active');
-//     // quizItems[btnIndex + 1].classList.add('_active');
-//   });
-
-//   btn.disabled = true;
-
-// });
-
-// quizItems.forEach((quizItem, quizItemIndex) => {
-
-
-// });
-
-
-
-
-let count = 0;
-quizItems[count].classList.add('_active');
+// let count = 0;
+// quizItems[count].classList.add('_active');
 
 btnsNext.forEach((btn) => {
   btn.disabled = true;
@@ -167,9 +57,8 @@ btnsNext.forEach((btn) => {
 
 quizItems.forEach((quizItem, quizItemIndex) => {
 
-
-
   quizItem.addEventListener('change', (e) => {
+    // console.log(count);
     const target = e.target;
     const inputsChecked = quizItem.querySelectorAll('input:checked');
 
@@ -181,122 +70,107 @@ quizItems.forEach((quizItem, quizItemIndex) => {
       btnsNext[quizItemIndex].disabled = true;
     }
 
-    // console.log(quizItem);
-
-    // function initQuiz() {
-    //   quizItems.forEach((element, i) => {
-    //     element.classList.remove('_active')
-    //     if (i === count) {
-    //       element.classList.add('_active')
-    //     }
-    //   })
-    // }
-
-    // if (buyTarget === 'Для инвестиций с доходностью 8%') {
-    //   btnsNext[quizItemIndex].disabled = false;
-    //   console.log(buyTarget);
-    //   btnsNext.forEach((btn) => {
-    //     btn.addEventListener('click', (e) => {
-    //       e.preventDefault();
-
-    //       quizItems[2].classList.add('_active');
-    //       quizItem.classList.remove('_active');
-
-    //     });
-    //   });
-    // };
-
-    // const buyTarget = document.querySelector('input:checked').value;
-
-    inputsChecked.forEach((i) => { // Это я перебираю все радио инпуты
-      console.log(i.value);
-
-      btnsNext.forEach((btn) => {    // Перебираю все кнопки Далее
-        btn.addEventListener('click', (e) => {   // Отлавливаю событие по кнопке
-          e.preventDefault();
-
-          if (i.value === 'Для инвестиций с доходностью 8%') {
-            quizItems[2].classList.add('_active');
-            quizItem.classList.remove('_active');
-
-            console.log('Удаляем предыдущий слайд');
-            console.log('Переходим на 2a слайд');
-          }
-
-          else
-            if (i.value === 'comfort') {
-              quizItems[1].classList.add('_active');
-              quizItem.classList.remove('_active');
-              console.log('Удаляем предыдущий слайд');
-
-              console.log('Переходим на 2 слайд');
-            } else
-
-              if (i.value === 'Новостройка' || 'Вторичное жильё' || 'Апартаменты в управление') {
-                quizItems[3].classList.add('_active');
-                quizItem.classList.remove('_active');
-                console.log('Переходим на 3 слайд');
-              }
-              else
-                if (i.value === 'Таунхаус/Вилла') {
-                  quizItems[4].classList.add('_active');
-                  quizItem.classList.remove('_active');
-                  console.log('Переходим на 3a слайд');
-                }
-
-
-          // if (i.value === 'comfort') {
-          //   quizItems[1].classList.add('_active');
-          //   quizItem.classList.remove('_active');
-          //   console.log('Переходим на 2 слайд');
-          // }
-
-
-        });
-      });
-
-
-
-    });
-
-
-    // if (buyTarget === 'comfort') {
-    //   btnsNext.forEach((btn) => {
-    //     btn.addEventListener('click', (e) => {
-    //       e.preventDefault();
-    //       quizItems[1].classList.add('_active');
-    //       quizItem.classList.remove('_active');
-    //       console.log(buyTarget);
-    //     });
-    //   });
-    // };
-
-    // if (buyTarget === 'Новостройка' || 'Вторичное жильё' || 'Апартаменты в управление') {
-    //   btnsNext.forEach((btn) => {
-    //     btn.addEventListener('click', (e) => {
-    //       e.preventDefault();
-    //       quizItems[3].classList.add('_active');
-    //       quizItem.classList.remove('_active');
-    //       console.log(buyTarget);
-    //     });
-    //   });
-    // };
-
-    // if (buyTarget === 'Таунхаус/Вилла') {
-    //   btnsNext.forEach((btn) => {
-    //     btn.addEventListener('click', (e) => {
-    //       e.preventDefault();
-    //       quizItems[4].classList.add('_active');
-    //       quizItem.classList.remove('_active');
-    //       console.log(buyTarget);
-
-    //     });
-    //   });
-    // };
-
-
   })
 });
+
+
+const quizObj = {
+  1: {
+    'Для комфортной и безопасной жизни': '2',
+    'Для инвестиций с доходностью 8%': '3'
+  },
+  2: {
+    'Новостройка': '4',
+    'Вторичное жильё': '4',
+    'Таунхаус/Вилла': '5'
+  },
+  3: {
+    'Новостройка': '4',
+    'Апартаменты в управление': '4',
+    'Таунхаус/Вилла': '5'
+  },
+  4: {
+    '1 спальня': '6',
+    '2 спальни': '6',
+    '3 и более спален': '6'
+  },
+  5: {
+    '2 спальни': '7',
+    '3 и более спален': '7'
+  },
+  6: {
+    '1 по 10 этажи': '8',
+    '10 по 20 этажи': '8',
+    'выше 20-ого': '8'
+  },
+  7: {
+    '1 этаж': '8',
+    '2 этажа': '8',
+    '3 и более этажей': '8'
+  },
+  8: {
+    'до $40 000': '9',
+    '$40 000 - $100 000': '9',
+    '$100 000 - $300 000': '9',
+    'свыше $300 000': '9'
+  }
+};
+
+const answers = [];
+
+const nextButtons = document.querySelectorAll('.button_next');
+
+nextButtons.forEach(btn => {
+  btn.addEventListener('click', (event) => {
+    const currentElement = event.currentTarget;
+    const currentSlide = currentElement.closest('.quiz-form__fieldset');
+    const currentSlideNumber = currentSlide.dataset.card;
+    const selectedInputs = currentSlide.querySelector('input[type="radio"]:checked');
+    // const currentSlideTitle = currentSlide.querySelector('.slide__title');
+
+    if (!selectedInputs) return
+
+    answers.push({
+      id: currentSlideNumber,
+      // question: currentSlideTitle.innerText,
+      answer: selectedInputs.value
+    });
+
+    const nextSlideNumber = quizObj[currentSlideNumber][selectedInputs.value];
+
+    const nextSlideElement = document.querySelector(`.quiz-form__fieldset[data-card='${nextSlideNumber}']`);
+
+    if (nextSlideElement) {
+      currentSlide.classList.add('hidden')
+      nextSlideElement.classList.remove('hidden')
+    }
+
+    console.log(answers)
+    console.log(nextSlideElement);
+
+  });
+})
+
+
+
+// btnsNext.forEach((btn) => {
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     count++; // При каждом нажатии кнопки Вперед увеличиваем счетик на 1
+//     initQuiz();
+//   });
+
+// });
+
+// function initQuiz() {
+//   quizItems.forEach((element, i) => {
+//     element.classList.remove('_active')
+//     if (i === count) {
+//       element.classList.add('_active')
+//     }
+//   })
+// }
+
 
 const objects = document.querySelector('.object-popup__media');
 const objectItems = objects.querySelectorAll('.object-popup__image-ibg');

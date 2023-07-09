@@ -70,7 +70,7 @@
 <div id="quiz-popup" aria-hidden="true" class="popup quiz-popup">
 	<div class="quiz-popup__wrapper popup__wrapper">
 		<div class="quiz-popup__content popup__content">
-			<button data-close type="button" class="popup__close"></button>
+			<!-- <button data-close type="button" class="popup__close"></button> -->
 			<button data-close type="button" class="popup__close">
 				<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path opacity="0.5" d="M10 1L1 10M1 1L10 10" stroke="white" stroke-linecap="square" stroke-linejoin="round" />
@@ -79,7 +79,7 @@
 			<form id="quiz-form" class="form quiz-form" action="#" method="POST" data-dev
 				data-popup-message="#quiz-thanks-popup">
 
-				<fieldset class="quiz-form__fieldset quiz-form__fieldset_first">
+				<fieldset class="quiz-form__fieldset quiz-form__fieldset_first" data-card="1" data-validate="novalidate">
 					<div class="quiz-form__content quiz-form__content_1">
 						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
 						<h3 class="quiz-form__title">С какой целью планируете приобрести недвижимость?</h3>
@@ -89,7 +89,7 @@
 								<span class="wpcf7-list-item">
 
 									<label>
-										<input type="radio" name="target" value="comfort">
+										<input type="radio" name="target" value="Для комфортной и безопасной жизни">
 										<span class="wpcf7-list-item-label quiz-form__label">
 											Для комфортной и безопасной жизни
 										</span>
@@ -165,7 +165,7 @@
 
 				</fieldset>
 
-				<fieldset class="quiz-form__fieldset">
+				<fieldset class="quiz-form__fieldset hidden" data-card="2">
 					<div class="quiz-form__content quiz-form__content_2">
 						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
 						<h3 class="quiz-form__title">Какой тип жилья вы рассматриваете для покупки?</h3>
@@ -265,7 +265,7 @@
 
 				</fieldset>
 
-				<fieldset class="quiz-form__fieldset">
+				<fieldset class="quiz-form__fieldset hidden" data-card="3">
 					<div class="quiz-form__content quiz-form__content_2a">
 						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
 						<h3 class="quiz-form__title">Какой тип жилья вы рассматриваете для покупки?</h3>
@@ -365,7 +365,7 @@
 
 				</fieldset>
 
-				<fieldset class="quiz-form__fieldset">
+				<fieldset class="quiz-form__fieldset hidden" data-card="4">
 					<div class="quiz-form__content quiz-form__content_3">
 						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
 						<h3 class="quiz-form__title">Какое количество спален вам необходимо?</h3>
@@ -455,7 +455,7 @@
 
 				</fieldset>
 
-				<fieldset class="quiz-form__fieldset">
+				<fieldset class="quiz-form__fieldset hidden" data-card="5">
 					<div class="quiz-form__content quiz-form__content_3a">
 						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
 						<h3 class="quiz-form__title">Какое количество спален вам необходимо?</h3>
@@ -533,7 +533,7 @@
 
 				</fieldset>
 
-				<fieldset class="quiz-form__fieldset">
+				<fieldset class="quiz-form__fieldset hidden" data-card="6">
 					<div class="quiz-form__content quiz-form__content_4">
 						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
 						<h3 class="quiz-form__title">Ваши предпочтения по этажам?</h3>
@@ -632,7 +632,7 @@
 
 				</fieldset>
 
-				<fieldset class="quiz-form__fieldset">
+				<fieldset class="quiz-form__fieldset hidden" data-card="7">
 					<div class="quiz-form__content quiz-form__content_4a">
 						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
 						<h3 class="quiz-form__title">Ваши предпочтения по этажам?</h3>
@@ -730,7 +730,7 @@
 
 				</fieldset>
 
-				<fieldset class="quiz-form__fieldset quiz-form__fieldset_price">
+				<fieldset class="quiz-form__fieldset hidden quiz-form__fieldset_price" data-card="8">
 					<div class="quiz-form__content quiz-form__content_5">
 						<h4 class="quiz-form__slogan">Подберём объекты недвижимости под ваши критерии</h4>
 						<h3 class="quiz-form__title">Укажите ваш примерный бюджет на приобретение недвижимости?</h3>
@@ -838,7 +838,7 @@
 
 				</fieldset>
 
-				<fieldset class="quiz-form__fieldset quiz-form__fieldset_finish">
+				<fieldset class="quiz-form__fieldset hidden quiz-form__fieldset_finish" data-card="9">
 					<div class="quiz-form__content">
 						<h3 class="quiz-form__title quiz-form__title_finish">Заполните форму, и мы отправим Вам актуальный каталог с
 							лучшими объектами по вашим запросам</h3>
@@ -884,7 +884,7 @@
 				</fieldset>
 
 			</form>
-		</div>
+		</div> 
 	</div>
 </div>
 
