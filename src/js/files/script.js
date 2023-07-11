@@ -153,23 +153,38 @@ nextButtons.forEach(btn => {
 
 
 
-// btnsNext.forEach((btn) => {
-//   btn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     count++; // При каждом нажатии кнопки Вперед увеличиваем счетик на 1
-//     initQuiz();
-//   });
+// Для Wordpress добавления порядкового номера объектам слайдера и попапам, зависящих от нимх
 
-// });
+// const objPopupNewSpan = document.querySelectorAll('.object-popup-new-span');
+// const objPopupOldSpan = document.querySelectorAll('.object-popup-old-span');
+// const objPopupNew = document.querySelectorAll('.object-popup-new');
+// const objPopupOld = document.querySelectorAll('.object-popup-old');
 
-// function initQuiz() {
-//   quizItems.forEach((element, i) => {
-//     element.classList.remove('_active')
-//     if (i === count) {
-//       element.classList.add('_active')
-//     }
-//   })
+// // console.log(objPopupNew);
+
+
+// for (var i = 0, b; b = document.getElementById('object-popup-new'); ++i) {
+//   b.id += '-' + i;
+//   console.log(b.id);
 // }
+
+// for (var i = 0, b; b = document.getElementById('object-popup-old'); ++i) {
+//   b.id += '-' + i;
+// }
+
+
+// objPopupNewSpan.forEach((element, i) =>
+//   element.setAttribute('data-popup', '#object-popup-new' + '-' + i));
+
+// objPopupOldSpan.forEach((element, i) =>
+//   element.setAttribute('data-popup', '#object-popup-old' + '-' + i));
+
+// objPopupNew.forEach((element, i) =>
+//   element.setAttribute('data-popup', '#object-popup-new' + '-' + i));
+
+// objPopupOld.forEach((element, i) =>
+//   element.setAttribute('data-popup', '#object-popup-old' + '-' + i));
+
 
 
 const objects = document.querySelector('.object-popup__media');
