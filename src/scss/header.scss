@@ -130,11 +130,11 @@
 		align-items: center;
 		gap: rem(6);
 
-		&_mobile {
-			@media (min-width:em(768)) {
-				display: none;
-			}
-		}
+		// &_mobile {
+		// 	@media (min-width:em(768)) {
+		// 		display: none;
+		// 	}
+		// }
 
 		@media (max-width:em(768)) {
 			margin-left: auto;
