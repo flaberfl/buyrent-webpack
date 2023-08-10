@@ -187,50 +187,105 @@ nextButtons.forEach(btn => {
 
 
 
-const objects = document.querySelector('.object-popup__media');
-const objectItems = objects.querySelectorAll('.object-popup__image-ibg');
-const btnImageNext = document.querySelectorAll('.button-media-next');
-const btnImagePrev = document.querySelectorAll('.button-media-prev');
+// const objects = document.querySelector('.object-popup__media');
+// const objectItems = objects.querySelectorAll('.object-popup__image-ibg');
+// const btnImageNext = document.querySelectorAll('.button-media-next');
+// const btnImagePrev = document.querySelectorAll('.button-media-prev');
 
 
-let countImage = 0;
-objectItems[countImage].classList.add('_active');
+// let countImage = 0;
+// objectItems[countImage].classList.add('_active');
 
-btnImageNext.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    countImage++;
-    initObjectMedia();
-    if (countImage >= objectItems.length) {
-      countImage = 0;
-      objectItems[countImage].classList.add('_active');
-    }
+// btnImageNext.forEach((btn) => {
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     countImage++;
+//     initObjectMedia();
+//     if (countImage >= objectItems.length) {
+//       countImage = 0;
+//       objectItems[countImage].classList.add('_active');
+//     }
 
-    console.log(countImage);
-  });
-});
+//     console.log(countImage);
+//   });
+// });
 
-btnImagePrev.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    countImage--;
-    console.log(countImage);
-    console.log(objectItems.length);
+// btnImagePrev.forEach((btn) => {
+//   btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     countImage--;
+//     console.log(countImage);
+//     console.log(objectItems.length);
 
-    initObjectMedia();
-    if (countImage < 0) {
-      countImage = objectItems.length - 1;
-      objectItems[countImage].classList.add('_active');
-    }
-  });
-});
+//     initObjectMedia();
+//     if (countImage < 0) {
+//       countImage = objectItems.length - 1;
+//       objectItems[countImage].classList.add('_active');
+//     }
+//   });
+// });
 
-function initObjectMedia() {
-  objectItems.forEach((element, i) => {
-    element.classList.remove('_active')
-    if (i === countImage) {
-      element.classList.add('_active')
-    }
-  })
+// function initObjectMedia() {
+//   objectItems.forEach((element, i) => {
+//     element.classList.remove('_active')
+//     if (i === countImage) {
+//       element.classList.add('_active')
+//     }
+//   })
+// }
+
+
+
+function findVideos() {
+  let videos = document.querySelectorAll('.video');
+
+  for (let i = 0; i < videos.length; i++) {
+      setupVideo(videos[i]);
+  }
 }
+
+function setupVideo(video) {
+  let link = video.querySelector('.video__link');
+  let media = video.querySelector('.video__media');
+  let button = video.querySelector('.video__button');
+  let id = parseMediaURL(media);
+
+  video.addEventListener('click', () => {
+      let iframe = createIframe(id);
+
+      link.remove();
+      button.remove();
+      video.appendChild(iframe);
+  });
+
+  link.removeAttribute('href');
+  video.classList.add('video--enabled');
+}
+
+function parseMediaURL(media) {
+  let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+  let url = media.src;
+  let match = url.match(regexp);
+
+  return match[1];
+}
+
+function createIframe(id) {
+  let iframe = document.createElement('iframe');
+
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.setAttribute('allow', 'autoplay');
+  iframe.setAttribute('src', generateURL(id));
+  iframe.classList.add('video__media');
+
+  return iframe;
+}
+
+function generateURL(id) {
+  let query = '?rel=0&showinfo=0&autoplay=1';
+
+  return 'https://www.youtube.com/embed/' + id + query;
+}
+
+findVideos();
 
